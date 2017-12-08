@@ -7,13 +7,23 @@
 //
 
 #import "CustomCollectionViewCell.h"
+@interface CustomCollectionViewCell ()
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIImageView *headimage;
 
+@end
 @implementation CustomCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-//    self.backgroundColor = [UIColor greenColor];
+}
+-(void)setHead:(headicon *)Head
+{
+    _Head = Head;
+    self.headimage.image = [UIImage imageNamed:Head.iconUrl];
+    self.name.text = Head.name;
+
 }
 
 @end

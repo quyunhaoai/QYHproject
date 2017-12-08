@@ -8,10 +8,10 @@
 
 #import "MeTableViewController.h"
 #import "CustomCollectionViewCell.h"
-
+#import "headicon.h"
 static NSString *const ID = @"cellid";
 @interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
-
+@property (nonatomic,strong) NSMutableArray *CollectionData;
 @end
 
 @implementation MeTableViewController
@@ -24,6 +24,7 @@ static NSString *const ID = @"cellid";
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
+    
 }
 -(void)setupFootView
 {
@@ -50,35 +51,38 @@ static NSString *const ID = @"cellid";
     collectionview.delegate = self;
     collectionview.dataSource = self;
     collectionview.scrollEnabled = NO;
-//    [collectionview registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ID];
+
     [collectionview registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
     
+    _CollectionData = [NSMutableArray array];
+    for (int i = 0; i < 12; i ++) {
+        headicon *head = [[headicon alloc] init];
+        head.iconUrl = @"defaultUserIcon";
+        head.name = [NSString stringWithFormat:@"qyh%d",i];
+        [_CollectionData addObject:head];
+    }
     
-    
+}
+- (IBAction)returnTopController:(id)sender {
+//    [self popoverPresentationController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-//-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-//{
-//    return 1;
-//}
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.CollectionData.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor greenColor];
+    cell.Head = self.CollectionData[indexPath.row];
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__FUNCTION__);
 }
+
 //#pragma mark - Table view data source
 //
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -41,7 +41,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="导航控制器" id="jzk-4N-fp5"/>
+                    <navigationItem key="navigationItem" title="导航控制器" id="jzk-4N-fp5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="JOd-Xa-ebD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OoR-Gf-JnU">
+                                <rect key="frame" x="285" y="11" width="74" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="-20" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-9" maxY="0.0"/>
+                                <state key="normal" image="mine-setting-icon"/>
+                                <state key="highlighted" image="mine-setting-icon-click"/>
+                                <connections>
+                                    <segue destination="Fdq-eF-dbF" kind="push" id="ZiV-tz-PTP"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +83,7 @@
         <scene sceneID="5Ol-Vf-VUv">
             <objects>
                 <tableViewController id="Fdq-eF-dbF" customClass="MeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7rA-nl-wNN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7rA-nl-wNN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -126,7 +140,19 @@
                             <outlet property="delegate" destination="Fdq-eF-dbF" id="1RC-CR-YNR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我" id="fVP-Ao-sQY"/>
+                    <navigationItem key="navigationItem" title="我" id="fVP-Ao-sQY">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="gRf-pw-zul">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jya-zs-gsW">
+                                <rect key="frame" x="16" y="11" width="69" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="navigationButtonReturn"/>
+                                <state key="highlighted" image="navigationButtonReturnClick"/>
+                                <connections>
+                                    <action selector="returnTopController:" destination="Fdq-eF-dbF" eventType="touchUpInside" id="nYj-dP-yPY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpR-a5-oKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +160,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mine-setting-icon" width="20" height="20"/>
+        <image name="mine-setting-icon-click" width="20" height="20"/>
+        <image name="navigationButtonReturn" width="15" height="21"/>
+        <image name="navigationButtonReturnClick" width="15" height="21"/>
         <image name="setup-head-default" width="36" height="36"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xz7-5Y-af1"/>
+    </inferredMetricsTieBreakers>
 </document>

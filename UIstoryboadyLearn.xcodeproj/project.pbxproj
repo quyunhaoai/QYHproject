@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F436F621FDA441C00E05A9F /* headicon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F436F611FDA441C00E05A9F /* headicon.m */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
 		3FD443EB1FCD496C0058B3EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD443EA1FCD496C0058B3EF /* AppDelegate.m */; };
 		3FD443EE1FCD496C0058B3EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD443ED1FCD496C0058B3EF /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F436F601FDA441C00E05A9F /* headicon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = headicon.h; sourceTree = "<group>"; };
+		3F436F611FDA441C00E05A9F /* headicon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = headicon.m; sourceTree = "<group>"; };
 		3F43D7861FD125C3008639DF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		3F43D7871FD125C4008639DF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		3FD443E61FCD496C0058B3EF /* UIstoryboadyLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIstoryboadyLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +77,6 @@
 				3FD443EA1FCD496C0058B3EF /* AppDelegate.m */,
 				3FD443EC1FCD496C0058B3EF /* ViewController.h */,
 				3FD443ED1FCD496C0058B3EF /* ViewController.m */,
-				3F43D7871FD125C4008639DF /* UIView+frame.h */,
-				3F43D7861FD125C3008639DF /* UIView+frame.m */,
 				3FD443EF1FCD496C0058B3EF /* Main.storyboard */,
 				3FD443F21FCD496C0058B3EF /* Assets.xcassets */,
 				3FD443F41FCD496C0058B3EF /* LaunchScreen.storyboard */,
@@ -88,6 +89,7 @@
 		3FD443FF1FCD4A390058B3EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3FDFE2151FDA64E40002A594 /* Other */,
 				3FD444001FCD4A500058B3EF /* Me */,
 			);
 			path = Classes;
@@ -125,8 +127,27 @@
 		3FD444031FCD4A8E0058B3EF /* model */ = {
 			isa = PBXGroup;
 			children = (
+				3F436F601FDA441C00E05A9F /* headicon.h */,
+				3F436F611FDA441C00E05A9F /* headicon.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		3FDFE2151FDA64E40002A594 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3FDFE2161FDA64F30002A594 /* Category */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		3FDFE2161FDA64F30002A594 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3F43D7871FD125C4008639DF /* UIView+frame.h */,
+				3F43D7861FD125C3008639DF /* UIView+frame.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +228,7 @@
 				3FD443EB1FCD496C0058B3EF /* AppDelegate.m in Sources */,
 				3FD4440C1FCD4B6C0058B3EF /* MeTableViewController.m in Sources */,
 				3FD444131FCD5AF70058B3EF /* CustomCollectionViewCell.m in Sources */,
+				3F436F621FDA441C00E05A9F /* headicon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
