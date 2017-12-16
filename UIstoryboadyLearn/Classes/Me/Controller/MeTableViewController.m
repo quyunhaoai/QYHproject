@@ -8,7 +8,7 @@
 
 #import "MeTableViewController.h"
 #import "CustomCollectionViewCell.h"
-#import "headicon.h"
+#import "person.h"
 static NSString *const ID = @"cellid";
 @interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *CollectionData;
@@ -56,7 +56,7 @@ static NSString *const ID = @"cellid";
     
     _CollectionData = [NSMutableArray array];
     for (int i = 0; i < 12; i ++) {
-        headicon *head = [[headicon alloc] init];
+        person *head = [[person alloc] init];
         head.iconUrl = @"defaultUserIcon";
         head.name = [NSString stringWithFormat:@"qyh%d",i];
         [_CollectionData addObject:head];
