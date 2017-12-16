@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,11 +18,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-Dy-1lS">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" id="NlT-Dy-1lS">
                         <rect key="frame" x="5" y="0.0" width="50" height="39.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxQ-KE-Ygh">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gxQ-KE-Ygh">
                         <rect key="frame" x="0.0" y="39.5" width="60" height="20.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,18 +32,6 @@
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="gxQ-KE-Ygh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0Uh-Pl-bHP"/>
-                <constraint firstAttribute="trailing" secondItem="NlT-Dy-1lS" secondAttribute="trailing" constant="5" id="1go-5D-v6O"/>
-                <constraint firstItem="gxQ-KE-Ygh" firstAttribute="top" secondItem="NlT-Dy-1lS" secondAttribute="bottom" id="Cj1-Pe-SqE"/>
-                <constraint firstItem="NlT-Dy-1lS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R2z-e9-lkh"/>
-                <constraint firstItem="NlT-Dy-1lS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="U0J-nJ-NNH"/>
-                <constraint firstAttribute="bottom" secondItem="gxQ-KE-Ygh" secondAttribute="bottom" id="UGH-rw-aFV"/>
-                <constraint firstAttribute="trailing" secondItem="gxQ-KE-Ygh" secondAttribute="trailing" id="Ycm-aW-q70"/>
-                <constraint firstItem="NlT-Dy-1lS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="lfA-i6-WCZ"/>
-                <constraint firstItem="gxQ-KE-Ygh" firstAttribute="top" secondItem="NlT-Dy-1lS" secondAttribute="bottom" id="pz6-sU-f02"/>
-            </constraints>
-            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="122" height="110"/>
             <connections>
                 <outlet property="headimage" destination="NlT-Dy-1lS" id="FEm-ma-Xuc"/>
