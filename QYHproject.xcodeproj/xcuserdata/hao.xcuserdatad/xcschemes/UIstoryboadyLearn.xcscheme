@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3FD443E51FCD496C0058B3EF"
-               BuildableName = "UIstoryboadyLearn.app"
-               BlueprintName = "UIstoryboadyLearn"
-               ReferencedContainer = "container:UIstoryboadyLearn.xcodeproj">
+               BuildableName = "QYHproject.app"
+               BlueprintName = "QYHproject"
+               ReferencedContainer = "container:QYHproject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FD443E51FCD496C0058B3EF"
-            BuildableName = "UIstoryboadyLearn.app"
-            BlueprintName = "UIstoryboadyLearn"
-            ReferencedContainer = "container:UIstoryboadyLearn.xcodeproj">
+            BuildableName = "QYHproject.app"
+            BlueprintName = "QYHproject"
+            ReferencedContainer = "container:QYHproject.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FD443E51FCD496C0058B3EF"
-            BuildableName = "UIstoryboadyLearn.app"
-            BlueprintName = "UIstoryboadyLearn"
-            ReferencedContainer = "container:UIstoryboadyLearn.xcodeproj">
+            BuildableName = "QYHproject.app"
+            BlueprintName = "QYHproject"
+            ReferencedContainer = "container:QYHproject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FD443E51FCD496C0058B3EF"
-            BuildableName = "UIstoryboadyLearn.app"
-            BlueprintName = "UIstoryboadyLearn"
-            ReferencedContainer = "container:UIstoryboadyLearn.xcodeproj">
+            BuildableName = "QYHproject.app"
+            BlueprintName = "QYHproject"
+            ReferencedContainer = "container:QYHproject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
