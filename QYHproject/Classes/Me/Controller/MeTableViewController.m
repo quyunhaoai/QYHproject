@@ -9,13 +9,22 @@
 #import "MeTableViewController.h"
 #import "CustomCollectionViewCell.h"
 #import "person.h"
+#import "QyhAlterView.h"
 static NSString *const ID = @"cellid";
-@interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray *CollectionData;
 @end
 
 @implementation MeTableViewController
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s",__FUNCTION__);
+    [QyhAlterView showAlterViewStatue:NORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5 onDismiss:^(NSInteger buttonIndex) {
+        
+    } onCancel:^{
+        
+    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -24,7 +33,7 @@ static NSString *const ID = @"cellid";
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
-    
+    self.tableView.delegate = self;
 }
 -(void)setupFootView
 {
@@ -64,7 +73,6 @@ static NSString *const ID = @"cellid";
     
 }
 - (IBAction)returnTopController:(id)sender {
-//    [self popoverPresentationController];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -81,6 +89,11 @@ static NSString *const ID = @"cellid";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__FUNCTION__);
+    [QyhAlterView showAlterViewStatue:SHOWORIGIN message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5  onDismiss:^(NSInteger buttonIndex) {
+        
+    } onCancel:^{
+        
+    }];
 }
 
 //#pragma mark - Table view data source
