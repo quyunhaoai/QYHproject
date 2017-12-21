@@ -11,7 +11,7 @@
 #import "person.h"
 #import "QyhAlterView.h"
 static NSString *const ID = @"cellid";
-@interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate>
+@interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *CollectionData;
 @end
 
@@ -33,7 +33,7 @@ static NSString *const ID = @"cellid";
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
-    self.tableView.delegate = self;
+
 }
 -(void)setupFootView
 {
