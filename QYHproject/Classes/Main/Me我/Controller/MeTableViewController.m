@@ -27,12 +27,13 @@ static NSString *const ID = @"cellid";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"我";
     //设置footView
     [self setupFootView];
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
+    NSLog(@"%@",NSStringFromCGRect(self.tableView.frame));
 
 }
 -(void)setupFootView

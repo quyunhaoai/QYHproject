@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "QYHTabbarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    QYHTabbarViewController *tabBar = [[QYHTabbarViewController alloc] init];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tabBar;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

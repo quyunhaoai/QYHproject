@@ -6,21 +6,22 @@
 //  Copyright © 2017年 hao. All rights reserved.
 //
 #define ScreenW [UIScreen mainScreen].bounds.size.width
-#import "ViewController.h"
+#import "QYHOneViewController.h"
 #import "MeTableViewController.h"
 #import "UIView+frame.h"
 CGFloat  const marin=10;
-@interface ViewController ()
+@interface QYHOneViewController ()
 @property (nonatomic, weak) UIScrollView *scrollview;
 @property (nonatomic, weak) UIButton *currelButton;
 @property (nonatomic, strong) UIView *titleView;
 @property (nonatomic, weak) UIView *underline;
 @end
 
-@implementation ViewController
+@implementation QYHOneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"精华";
     //添加ScrollView
     [self setupContenView];
     //添加titleview
@@ -31,7 +32,7 @@ CGFloat  const marin=10;
 -(void)setupTitleView
 {
     NSArray *titles = @[@"新闻",@"视频",@"音乐",@"小说",@"社会"];
-    UIView *titleview = [[UIView alloc]initWithFrame:CGRectMake(0, 64, ScreenW, 40)];
+    UIView *titleview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, 40)];
     [titleview setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
     [self.scrollview addSubview:titleview];
     self.titleView = titleview;
