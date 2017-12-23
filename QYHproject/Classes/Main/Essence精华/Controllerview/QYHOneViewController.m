@@ -71,11 +71,16 @@ CGFloat  const marin=10;
     
     
 }
+-(void)viewDidLayoutSubviews
+{
+//    self.underline.qyh_width =[[self.titleView subviews] firstObject];
+    NSLog(@"%s",__FUNCTION__);
+}
 -(void)setuptitleunderline
 {
     UIView *underline = [[UIView alloc] init];
-    UIButton *button = [[self.titleView subviews] firstObject];
-    NSString *currenttile = button.currentTitle;
+    UIButton *button = (UIButton *)[[self.titleView subviews] firstObject];
+    [button.titleLabel sizeToFit];
     CGFloat underlineX = 0;
     CGFloat underlineW = button.titleLabel.qyh_width ;
     NSLog(@"%f",underlineW);
@@ -83,6 +88,8 @@ CGFloat  const marin=10;
     underline.backgroundColor = [button titleColorForState:UIControlStateSelected];
     button.selected = YES;
     self.currelButton = button;
+    underline.qyh_center_x = button.qyh_center_x;
+    underline.backgroundColor = [button titleColorForState:UIControlStateSelected];
     [self.titleView addSubview:underline];
     _underline = underline;
 }
