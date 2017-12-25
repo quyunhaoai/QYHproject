@@ -21,4 +21,7 @@
 #import "QYHCustomTabBar.h"
 #import "QYHBaseNavigationViewController.h"
 
+#define NavBarHeight 64
+#define TitleBarHeight 35
+#define TabBarHeight 49
 #endif /* QYH_h */

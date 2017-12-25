@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0BE5A01FF0A144007E2F5F /* QYHvodieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE5971FF0A140007E2F5F /* QYHvodieViewController.m */; };
+		3F0BE5A11FF0A144007E2F5F /* QYHallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE5981FF0A141007E2F5F /* QYHallViewController.m */; };
+		3F0BE5A21FF0A144007E2F5F /* QYHmuiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE5991FF0A141007E2F5F /* QYHmuiceViewController.m */; };
+		3F0BE5A31FF0A144007E2F5F /* QYHworldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */; };
+		3F0BE5A41FF0A144007E2F5F /* QYHpicerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
 		3F8883D21FEE3092007309FB /* QYHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883D11FEE3091007309FB /* QYHTool.m */; };
 		3F8884061FEE3893007309FB /* QYHBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883EF1FEE3892007309FB /* QYHBaseNavigationViewController.m */; };
@@ -34,6 +39,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0BE5961FF0A140007E2F5F /* QYHvodieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHvodieViewController.h; sourceTree = "<group>"; };
+		3F0BE5971FF0A140007E2F5F /* QYHvodieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHvodieViewController.m; sourceTree = "<group>"; };
+		3F0BE5981FF0A141007E2F5F /* QYHallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHallViewController.m; sourceTree = "<group>"; };
+		3F0BE5991FF0A141007E2F5F /* QYHmuiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHmuiceViewController.m; sourceTree = "<group>"; };
+		3F0BE59A1FF0A142007E2F5F /* QYHpicerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHpicerViewController.h; sourceTree = "<group>"; };
+		3F0BE59B1FF0A142007E2F5F /* QYHworldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHworldViewController.h; sourceTree = "<group>"; };
+		3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHworldViewController.m; sourceTree = "<group>"; };
+		3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHpicerViewController.m; sourceTree = "<group>"; };
+		3F0BE59E1FF0A143007E2F5F /* QYHallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHallViewController.h; sourceTree = "<group>"; };
+		3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHmuiceViewController.h; sourceTree = "<group>"; };
 		3F43D7861FD125C3008639DF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		3F43D7871FD125C4008639DF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		3F8883D01FEE3091007309FB /* QYHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHTool.h; sourceTree = "<group>"; };
@@ -267,6 +282,16 @@
 			children = (
 				3F8884431FEE4814007309FB /* QYHOneViewController.h */,
 				3F8884441FEE4814007309FB /* QYHOneViewController.m */,
+				3F0BE59E1FF0A143007E2F5F /* QYHallViewController.h */,
+				3F0BE5981FF0A141007E2F5F /* QYHallViewController.m */,
+				3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */,
+				3F0BE5991FF0A141007E2F5F /* QYHmuiceViewController.m */,
+				3F0BE59A1FF0A142007E2F5F /* QYHpicerViewController.h */,
+				3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */,
+				3F0BE5961FF0A140007E2F5F /* QYHvodieViewController.h */,
+				3F0BE5971FF0A140007E2F5F /* QYHvodieViewController.m */,
+				3F0BE59B1FF0A142007E2F5F /* QYHworldViewController.h */,
+				3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */,
 			);
 			path = Controllerview;
 			sourceTree = "<group>";
@@ -479,6 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0BE5A21FF0A144007E2F5F /* QYHmuiceViewController.m in Sources */,
+				3F0BE5A41FF0A144007E2F5F /* QYHpicerViewController.m in Sources */,
 				3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */,
 				3F8884071FEE3893007309FB /* QYHTabbarViewController.m in Sources */,
 				3FD443F91FCD496C0058B3EF /* main.m in Sources */,
@@ -488,13 +515,16 @@
 				3F8884611FEE49B6007309FB /* CustomCollectionViewCell.m in Sources */,
 				3F8884631FEE49B6007309FB /* MeTableViewController.m in Sources */,
 				3F8883D21FEE3092007309FB /* QYHTool.m in Sources */,
+				3F0BE5A31FF0A144007E2F5F /* QYHworldViewController.m in Sources */,
 				3F8884061FEE3893007309FB /* QYHBaseNavigationViewController.m in Sources */,
 				3FD443EB1FCD496C0058B3EF /* AppDelegate.m in Sources */,
 				3FECB7A11FE9142C006B66C6 /* QyhAlterView.m in Sources */,
 				3F8884601FEE49B6007309FB /* person.m in Sources */,
 				3F88844F1FEE4814007309FB /* QYHThreeViewController.m in Sources */,
 				3F88844E1FEE4814007309FB /* QYHFiveViewController.m in Sources */,
+				3F0BE5A11FF0A144007E2F5F /* QYHallViewController.m in Sources */,
 				3F8884081FEE3893007309FB /* QYHbutton.m in Sources */,
+				3F0BE5A01FF0A144007E2F5F /* QYHvodieViewController.m in Sources */,
 				3F88845F1FEE49B6007309FB /* headicon.m in Sources */,
 				3F8884091FEE3893007309FB /* QYHCustomTabBar.m in Sources */,
 			);

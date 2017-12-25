@@ -9,9 +9,15 @@
 #import "QYHOneViewController.h"
 #import "MeTableViewController.h"
 #import "UIView+frame.h"
+#import "QYHallViewController.h"
+#import "QYHmuiceViewController.h"
+#import "QYHpicerViewController.h"
+#import "QYHvodieViewController.h"
+#import "QYHworldViewController.h"
+#import "QYH.h"
 CGFloat  const marin=10;
-@interface QYHOneViewController ()
-@property (nonatomic, weak) UIScrollView *scrollview;
+@interface QYHOneViewController ()<UIScrollViewDelegate>
+@property (nonatomic, weak) UIScrollView *myScrollView;
 @property (nonatomic, weak) UIButton *currelButton;
 @property (nonatomic, strong) UIView *titleView;
 @property (nonatomic, weak) UIView *underline;
@@ -22,25 +28,53 @@ CGFloat  const marin=10;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"精华";
+    //添加自控制器
+    [self addchildViews];
     //添加ScrollView
     [self setupContenView];
     //添加titleview
     [self setupTitleView];
 
+    //添加第0个控制器View
+    [self addVCtoScrollView:0];
 }
-
+-(void)addVCtoScrollView:(NSUInteger )integer
+{
+    UIViewController *childVc = self.childViewControllers[integer];
+    
+    if (childVc.isViewLoaded) return;
+    
+    UIView *childVcview = childVc.view;
+    
+    CGFloat scrollviewW = self.myScrollView.qyh_width;
+    
+    childVcview.frame = CGRectMake(scrollviewW * integer, TitleBarHeight, scrollviewW, self.myScrollView.qyh_height);
+    [self.myScrollView addSubview:childVcview];
+    NSLog(@"scrollviewY:%f",self.myScrollView.frame.origin.y);
+}
+-(void)addchildViews
+{
+    [self addChildViewController:[[QYHallViewController alloc]init]];
+    [self addChildViewController:[[QYHvodieViewController alloc]init]];
+    [self addChildViewController:[[QYHmuiceViewController alloc]init]];
+    [self addChildViewController:[[QYHpicerViewController alloc]init]];
+    [self addChildViewController:[[QYHworldViewController alloc]init]];
+    
+}
 -(void)setupTitleView
 {
-    NSArray *titles = @[@"新闻",@"视频",@"音乐",@"小说",@"社会"];
-    UIView *titleview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, 40)];
+    NSArray *titles = @[@"全部",@"视频",@"音乐",@"图片",@"段子"];
+    UIView *titleview = [[UIView alloc]initWithFrame:CGRectMake(0, NavBarHeight, ScreenW, TitleBarHeight)];
     [titleview setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
-    [self.scrollview addSubview:titleview];
+    [self.view addSubview:titleview];
     self.titleView = titleview;
     CGFloat titleButtonW = ScreenW/5;
     
     for (int i = 0; i < 5; i ++) {
         UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         CGFloat titleButtonX = titleButtonW *i;
+        titleButton.tag = i;
+        titleButton.titleLabel.font = [UIFont systemFontOfSize:14];
         titleButton.frame = CGRectMake(titleButtonX, 0, titleButtonW, titleview.frame.size.height);
         [titleButton addTarget:self action:@selector(chicktitleButton:) forControlEvents:UIControlEventTouchUpInside];
         [titleButton setTitle:[NSString stringWithFormat:@"%@",titles[i]] forState:UIControlStateNormal];
@@ -57,6 +91,7 @@ CGFloat  const marin=10;
 
 -(void)chicktitleButton:(UIButton *)button
 {
+    NSUInteger index = button.tag;
     self.currelButton.selected = NO;
     button.selected = YES;
     self.currelButton = button;
@@ -68,12 +103,13 @@ CGFloat  const marin=10;
         self.underline.qyh_center_x = button.qyh_center_x ;
         
     }];
-    
+    [self addVCtoScrollView:index];
+    self.myScrollView.contentOffset = CGPointMake(self.myScrollView.qyh_width*index, 0);
+
     
 }
 -(void)viewDidLayoutSubviews
 {
-//    self.underline.qyh_width =[[self.titleView subviews] firstObject];
     NSLog(@"%s",__FUNCTION__);
 }
 -(void)setuptitleunderline
@@ -95,10 +131,20 @@ CGFloat  const marin=10;
 }
 -(void)setupContenView
 {
-    UIScrollView *scrollview = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-    scrollview.backgroundColor = [UIColor yellowColor];
-    _scrollview = scrollview;
+    UIScrollView *scrollview = [[UIScrollView alloc] init];
+    scrollview.frame = self.view.bounds;
+//    scrollview.backgroundColor = [UIColor blueColor];
+    scrollview.delegate = self;
+    scrollview.showsVerticalScrollIndicator = NO;
+    scrollview.showsHorizontalScrollIndicator = NO;
+    scrollview.pagingEnabled = YES;
+    scrollview.scrollsToTop = NO;
     [self.view addSubview:scrollview];
+
+    NSUInteger count = self.childViewControllers.count;
+    CGFloat scrollW = scrollview.qyh_width;
+    scrollview.contentSize = CGSizeMake(count * scrollW, 0);
+    self.myScrollView = scrollview;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -112,5 +158,17 @@ CGFloat  const marin=10;
     
 //    [self.navigationController pushViewController:vc animated:YES];
 }
-
+/**
+ *  当用户松开scrollView并且滑动结束时调用这个代理方法（scrollView停止滚动的时候）
+ */
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    // 求出标题按钮的索引
+    NSUInteger index = scrollView.contentOffset.x / scrollView.qyh_width;
+    
+    // 点击对应的标题按钮
+    UIButton *titleButton = (UIButton *)self.titleView.subviews[index];
+    //    [self titleButtonClick:titleButton];
+    [self chicktitleButton:titleButton];
+}
 @end

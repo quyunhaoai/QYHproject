@@ -43,6 +43,7 @@
     self.selectedIndex = index;
 }
 -(void)setupTabBar{
+//    self.tabBar.translucent = NO;
     [self.tabBar removeFromSuperview];
     
     QYHCustomTabBar *tabBar = [[QYHCustomTabBar alloc]initWithFrame:self.tabBar.frame ];
@@ -62,8 +63,8 @@
     QYHTwoViewController *two = [[QYHTwoViewController alloc]init];
     [self setupOneViewController:two image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] title:@"动态"];
     
-    QYHThreeViewController *three = [[QYHThreeViewController alloc]init];
-    [self setupOneViewController:three image:[UIImage imageNamed:@"tabBar_publish_icon"] selectImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] title:@"发布"];
+//    QYHThreeViewController *three = [[QYHThreeViewController alloc]init];
+//    [self setupOneViewController:three image:[UIImage imageNamed:@"tabBar_publish_icon"] selectImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] title:@"发布"];
 
     UIStoryboard *MeTable = [UIStoryboard storyboardWithName:@"MeTableViewController" bundle:nil];
     MeTableViewController *meVC = [MeTable instantiateViewControllerWithIdentifier:@"MeTableViewController"];
