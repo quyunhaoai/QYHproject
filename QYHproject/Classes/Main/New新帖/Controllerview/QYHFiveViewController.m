@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithRed:1.0 green:0.5 blue:0.3 alpha:1.0];
+    self.title = @"新帖";
 }
 
 - (void)didReceiveMemoryWarning {

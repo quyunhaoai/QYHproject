@@ -60,8 +60,13 @@
     QYHBaseNavigationViewController *nav = [[QYHBaseNavigationViewController alloc] initWithRootViewController:one];
     [self setupOneViewController:nav image:[UIImage imageNamed:@"tabBar_essence_icon"] selectImage:[UIImage imageNamed:@"tabBar_essence_click_icon"] title:@"精华"];
     
+    QYHFiveViewController *fiveView = [[QYHFiveViewController alloc]init];
+    QYHBaseNavigationViewController *NewNav = [[QYHBaseNavigationViewController alloc]initWithRootViewController:fiveView];
+    [self setupOneViewController:NewNav image:[UIImage imageNamed:@"tabBar_new_icon"] selectImage:[UIImage imageNamed:@"tabBar_new_click_icon"] title:@"新帖"];
+    
     QYHTwoViewController *two = [[QYHTwoViewController alloc]init];
-    [self setupOneViewController:two image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] title:@"动态"];
+    QYHBaseNavigationViewController *friendNav = [[QYHBaseNavigationViewController alloc]initWithRootViewController:two];
+    [self setupOneViewController:friendNav image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] title:@"动态"];
     
 //    QYHThreeViewController *three = [[QYHThreeViewController alloc]init];
 //    [self setupOneViewController:three image:[UIImage imageNamed:@"tabBar_publish_icon"] selectImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] title:@"发布"];
@@ -70,8 +75,7 @@
     MeTableViewController *meVC = [MeTable instantiateViewControllerWithIdentifier:@"MeTableViewController"];
     [self setupOneViewController:meVC image:[UIImage imageNamed:@"tabBar_me_icon"] selectImage:[UIImage imageNamed:@"tabBar_me_click_icon"] title:@"我"];
     
-    QYHFiveViewController *fiveView = [[QYHFiveViewController alloc]init];
-    [self setupOneViewController:fiveView image:[UIImage imageNamed:@"tabBar_new_icon"] selectImage:[UIImage imageNamed:@"tabBar_new_click_icon"] title:@"附近"];
+
 
 
 }

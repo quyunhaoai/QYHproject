@@ -19,7 +19,6 @@
 		3F8884081FEE3893007309FB /* QYHbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883F51FEE3892007309FB /* QYHbutton.m */; };
 		3F8884091FEE3893007309FB /* QYHCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883F71FEE3892007309FB /* QYHCustomTabBar.m */; };
 		3F88844D1FEE4814007309FB /* QYHTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8884321FEE4814007309FB /* QYHTwoViewController.m */; };
-		3F88844E1FEE4814007309FB /* QYHFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8884381FEE4814007309FB /* QYHFiveViewController.m */; };
 		3F88844F1FEE4814007309FB /* QYHThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F88843E1FEE4814007309FB /* QYHThreeViewController.m */; };
 		3F8884501FEE4814007309FB /* QYHOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8884441FEE4814007309FB /* QYHOneViewController.m */; };
 		3F88845F1FEE49B6007309FB /* headicon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8884541FEE49B6007309FB /* headicon.m */; };
@@ -33,6 +32,7 @@
 		3FD443F31FCD496C0058B3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD443F21FCD496C0058B3EF /* Assets.xcassets */; };
 		3FD443F61FCD496C0058B3EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD443F41FCD496C0058B3EF /* LaunchScreen.storyboard */; };
 		3FD443F91FCD496C0058B3EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD443F81FCD496C0058B3EF /* main.m */; };
+		3FE072B01FF24A9E002A8813 /* QYHFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */; };
 		3FECB79D1FE91422006B66C6 /* JKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECB79B1FE91422006B66C6 /* JKCountDownButton.m */; };
 		3FECB7A11FE9142C006B66C6 /* QyhAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECB79F1FE9142B006B66C6 /* QyhAlterView.m */; };
 		3FECB7A21FE9142C006B66C6 /* QyhAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FECB7A01FE9142C006B66C6 /* QyhAlterView.xib */; };
@@ -64,8 +64,6 @@
 		3F88842E1FEE4046007309FB /* QYH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYH.h; sourceTree = "<group>"; };
 		3F8884311FEE4814007309FB /* QYHTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHTwoViewController.h; sourceTree = "<group>"; };
 		3F8884321FEE4814007309FB /* QYHTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHTwoViewController.m; sourceTree = "<group>"; };
-		3F8884371FEE4814007309FB /* QYHFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHFiveViewController.h; sourceTree = "<group>"; };
-		3F8884381FEE4814007309FB /* QYHFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHFiveViewController.m; sourceTree = "<group>"; };
 		3F88843D1FEE4814007309FB /* QYHThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHThreeViewController.h; sourceTree = "<group>"; };
 		3F88843E1FEE4814007309FB /* QYHThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHThreeViewController.m; sourceTree = "<group>"; };
 		3F8884431FEE4814007309FB /* QYHOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHOneViewController.h; sourceTree = "<group>"; };
@@ -88,6 +86,8 @@
 		3FD443F51FCD496C0058B3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD443F71FCD496C0058B3EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD443F81FCD496C0058B3EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FE072AC1FF24A9E002A8813 /* QYHFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHFiveViewController.h; sourceTree = "<group>"; };
+		3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHFiveViewController.m; sourceTree = "<group>"; };
 		3FECB79B1FE91422006B66C6 /* JKCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKCountDownButton.m; sourceTree = "<group>"; };
 		3FECB79C1FE91422006B66C6 /* JKCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKCountDownButton.h; sourceTree = "<group>"; };
 		3FECB79E1FE9142B006B66C6 /* QyhAlterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QyhAlterView.h; sourceTree = "<group>"; };
@@ -109,11 +109,11 @@
 		3F4715831FE5096F006E38CB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3FE072AA1FF24A9E002A8813 /* New新帖 */,
 				3F8883EC1FEE3892007309FB /* main主要 */,
 				3F8884411FEE4814007309FB /* Essence精华 */,
 				3F88842F1FEE4814007309FB /* FriendTrends动态 */,
 				3F8884471FEE4814007309FB /* Me我 */,
-				3F8884351FEE4814007309FB /* New附近 */,
 				3F88843B1FEE4814007309FB /* Publish发布 */,
 				3FD443EF1FCD496C0058B3EF /* Main.storyboard */,
 			);
@@ -195,39 +195,6 @@
 			sourceTree = "<group>";
 		};
 		3F8884341FEE4814007309FB /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		3F8884351FEE4814007309FB /* New附近 */ = {
-			isa = PBXGroup;
-			children = (
-				3F8884361FEE4814007309FB /* Controllerview */,
-				3F8884391FEE4814007309FB /* model */,
-				3F88843A1FEE4814007309FB /* view */,
-			);
-			path = "New附近";
-			sourceTree = "<group>";
-		};
-		3F8884361FEE4814007309FB /* Controllerview */ = {
-			isa = PBXGroup;
-			children = (
-				3F8884371FEE4814007309FB /* QYHFiveViewController.h */,
-				3F8884381FEE4814007309FB /* QYHFiveViewController.m */,
-			);
-			path = Controllerview;
-			sourceTree = "<group>";
-		};
-		3F8884391FEE4814007309FB /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		3F88843A1FEE4814007309FB /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -410,6 +377,39 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		3FE072AA1FF24A9E002A8813 /* New新帖 */ = {
+			isa = PBXGroup;
+			children = (
+				3FE072AB1FF24A9E002A8813 /* Controllerview */,
+				3FE072AE1FF24A9E002A8813 /* model */,
+				3FE072AF1FF24A9E002A8813 /* view */,
+			);
+			path = "New新帖";
+			sourceTree = "<group>";
+		};
+		3FE072AB1FF24A9E002A8813 /* Controllerview */ = {
+			isa = PBXGroup;
+			children = (
+				3FE072AC1FF24A9E002A8813 /* QYHFiveViewController.h */,
+				3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */,
+			);
+			path = Controllerview;
+			sourceTree = "<group>";
+		};
+		3FE072AE1FF24A9E002A8813 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3FE072AF1FF24A9E002A8813 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		3FECB7991FE913DF006B66C6 /* Third */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +510,7 @@
 				3F8884071FEE3893007309FB /* QYHTabbarViewController.m in Sources */,
 				3FD443F91FCD496C0058B3EF /* main.m in Sources */,
 				3F8884501FEE4814007309FB /* QYHOneViewController.m in Sources */,
+				3FE072B01FF24A9E002A8813 /* QYHFiveViewController.m in Sources */,
 				3F88844D1FEE4814007309FB /* QYHTwoViewController.m in Sources */,
 				3FECB79D1FE91422006B66C6 /* JKCountDownButton.m in Sources */,
 				3F8884611FEE49B6007309FB /* CustomCollectionViewCell.m in Sources */,
@@ -521,7 +522,6 @@
 				3FECB7A11FE9142C006B66C6 /* QyhAlterView.m in Sources */,
 				3F8884601FEE49B6007309FB /* person.m in Sources */,
 				3F88844F1FEE4814007309FB /* QYHThreeViewController.m in Sources */,
-				3F88844E1FEE4814007309FB /* QYHFiveViewController.m in Sources */,
 				3F0BE5A11FF0A144007E2F5F /* QYHallViewController.m in Sources */,
 				3F8884081FEE3893007309FB /* QYHbutton.m in Sources */,
 				3F0BE5A01FF0A144007E2F5F /* QYHvodieViewController.m in Sources */,
