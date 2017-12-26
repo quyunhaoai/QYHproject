@@ -7,7 +7,7 @@
 //
 
 #import "QYHmuiceViewController.h"
-
+#import "QYH.h"
 @interface QYHmuiceViewController ()
 
 @end
@@ -18,11 +18,15 @@
     [super viewDidLoad];
 //    self.view.backgroundColor =[UIColor greenColor];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
-
+-(void)viewDidLayoutSubviews
+{
+    CGFloat y = 0;
+    self.view.qyh_y = y;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

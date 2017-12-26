@@ -43,8 +43,7 @@ static CancelBlock _cancelBlock;
             sharedView = [[[NSBundle mainBundle] loadNibNamed:@"QyhAlterView" owner:self options:nil] lastObject];
             sharedView.frame =CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
             sharedView.backgroundColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:0.4];
-           
-            
+ 
         }
     });
     return sharedView;

@@ -5,7 +5,7 @@
 //  Created by hao on 2017/12/1.
 //  Copyright © 2017年 hao. All rights reserved.
 //
-
+#import "QYH.h"
 #import "QYHpicerViewController.h"
 
 @interface QYHpicerViewController ()
@@ -18,11 +18,15 @@
     [super viewDidLoad];
 //    self.view.backgroundColor =[UIColor blueColor];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
-
+-(void)viewDidLayoutSubviews
+{
+    CGFloat y = 0;
+    self.view.qyh_y = y;
+}
 /*
 #pragma mark - Navigation
 

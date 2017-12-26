@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    [self setupTableView];
+    self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 -(NSMutableArray *)tableData
 {
@@ -34,7 +36,16 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    NSLog(@"%@",self.view.bounds);
+    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
+    CGFloat y = 0;
+    self.view.qyh_y = y;
+    self.tableView.qyh_y = y;
+}
+-(void)viewDidLayoutSubviews
+{
+    CGFloat y = 0;
+    self.view.qyh_y = y;
+    self.tableView.qyh_y = y;
 }
 -(void)setupTableView
 {

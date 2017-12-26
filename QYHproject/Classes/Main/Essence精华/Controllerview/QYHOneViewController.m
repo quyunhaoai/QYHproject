@@ -24,7 +24,12 @@ CGFloat  const marin=10;
 @end
 
 @implementation QYHOneViewController
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
+    NSLog(@"scrollview:%@",NSStringFromCGRect(self.myScrollView.bounds));
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"精华";
@@ -48,7 +53,7 @@ CGFloat  const marin=10;
     
     CGFloat scrollviewW = self.myScrollView.qyh_width;
     
-    childVcview.frame = CGRectMake(scrollviewW * integer, TitleBarHeight, scrollviewW, self.myScrollView.qyh_height);
+    childVcview.frame = CGRectMake(scrollviewW * integer, -99, scrollviewW, self.myScrollView.qyh_height);
     [self.myScrollView addSubview:childVcview];
     NSLog(@"scrollviewY:%f",self.myScrollView.frame.origin.y);
 }
@@ -110,7 +115,7 @@ CGFloat  const marin=10;
 }
 -(void)viewDidLayoutSubviews
 {
-    NSLog(@"%s",__FUNCTION__);
+//    NSLog(@"%s",__FUNCTION__);
 }
 -(void)setuptitleunderline
 {
@@ -133,12 +138,19 @@ CGFloat  const marin=10;
 {
     UIScrollView *scrollview = [[UIScrollView alloc] init];
     scrollview.frame = self.view.bounds;
-//    scrollview.backgroundColor = [UIColor blueColor];
+    scrollview.backgroundColor = [UIColor whiteColor];
     scrollview.delegate = self;
     scrollview.showsVerticalScrollIndicator = NO;
     scrollview.showsHorizontalScrollIndicator = NO;
     scrollview.pagingEnabled = YES;
     scrollview.scrollsToTop = NO;
+    scrollview.bounces = NO;
+    if (@available(iOS 11.0,*)) {
+         scrollview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     [self.view addSubview:scrollview];
 
     NSUInteger count = self.childViewControllers.count;
