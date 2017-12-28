@@ -53,7 +53,7 @@ CGFloat  const marin=10;
     
     CGFloat scrollviewW = self.myScrollView.qyh_width;
     
-    childVcview.frame = CGRectMake(scrollviewW * integer, -99, scrollviewW, self.myScrollView.qyh_height);
+    childVcview.frame = CGRectMake(scrollviewW * integer, 0, scrollviewW, self.myScrollView.qyh_height);
     [self.myScrollView addSubview:childVcview];
     NSLog(@"scrollviewY:%f",self.myScrollView.frame.origin.y);
 }

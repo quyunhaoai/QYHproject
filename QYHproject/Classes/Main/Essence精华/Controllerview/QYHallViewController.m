@@ -6,13 +6,14 @@
 //  Copyright © 2017年 hao. All rights reserved.
 //
 #import "QYH.h"
+#import "QYHModel.h"
 #import "QYHallViewController.h"
-
+#import "QYHCustomTableViewCell.h"
 @interface QYHallViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tableview;
+//@property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSMutableArray *tableData;
 @end
-
+static NSString *cellIdentifier = @"qyhcellID";
 @implementation QYHallViewController
 
 - (void)viewDidLoad {
@@ -21,6 +22,7 @@
     self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QYHCustomTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
 }
 -(NSMutableArray *)tableData
 {
@@ -36,16 +38,16 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
-    CGFloat y = 0;
-    self.view.qyh_y = y;
-    self.tableView.qyh_y = y;
+    NSLog(@"tableview%@",NSStringFromCGRect(self.tableView.frame));
+//    CGFloat y = 0;
+//    self.view.qyh_y = y;
+//    self.tableView.qyh_y = y;
 }
 -(void)viewDidLayoutSubviews
 {
-    CGFloat y = 0;
-    self.view.qyh_y = y;
-    self.tableView.qyh_y = y;
+//    CGFloat y = 0;
+//    self.view.qyh_y = y;
+//    self.tableView.qyh_y = y;
 }
 -(void)setupTableView
 {
@@ -58,11 +60,11 @@
     
     table.contentInset = UIEdgeInsetsMake(TitleBarHeight, 0, TabBarHeight, 0);
     
-    self.tableview = table;
+//    self.tableview = table;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40.0f;
+    return 274.0f;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -70,12 +72,16 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     static NSString *cellID = @"qyhcell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",self.class,self.tableData[indexPath.row]];
+     */
+    QYHCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell.QYHModel = nil;
     return cell;
 }
 

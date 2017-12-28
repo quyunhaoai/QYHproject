@@ -13,6 +13,9 @@
 		3F0BE5A31FF0A144007E2F5F /* QYHworldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */; };
 		3F0BE5A41FF0A144007E2F5F /* QYHpicerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
+		3F5945541FF4EF1D00091435 /* QYHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945531FF4EF1D00091435 /* QYHModel.m */; };
+		3F5945581FF4F04200091435 /* QYHCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */; };
+		3F5945591FF4F04200091435 /* QYHCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5945571FF4F04200091435 /* QYHCustomTableViewCell.xib */; };
 		3F61676C1FF4920A0071F7C1 /* QYHTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F61676B1FF4920A0071F7C1 /* QYHTwoViewController.xib */; };
 		3F61676F1FF496060071F7C1 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F61676D1FF496060071F7C1 /* UIBarButtonItem+Item.m */; };
 		3F61677A1FF4BBC50071F7C1 /* QYHfastLongin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6167701FF4BBC40071F7C1 /* QYHfastLongin.xib */; };
@@ -64,6 +67,11 @@
 		3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHmuiceViewController.h; sourceTree = "<group>"; };
 		3F43D7861FD125C3008639DF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		3F43D7871FD125C4008639DF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		3F5945521FF4EF1D00091435 /* QYHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHModel.h; sourceTree = "<group>"; };
+		3F5945531FF4EF1D00091435 /* QYHModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHModel.m; sourceTree = "<group>"; };
+		3F5945551FF4F04200091435 /* QYHCustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHCustomTableViewCell.h; sourceTree = "<group>"; };
+		3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHCustomTableViewCell.m; sourceTree = "<group>"; };
+		3F5945571FF4F04200091435 /* QYHCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHCustomTableViewCell.xib; sourceTree = "<group>"; };
 		3F61676B1FF4920A0071F7C1 /* QYHTwoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHTwoViewController.xib; sourceTree = "<group>"; };
 		3F61676D1FF496060071F7C1 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		3F61676E1FF496060071F7C1 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
@@ -144,12 +152,12 @@
 		3F4715831FE5096F006E38CB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3FE072AA1FF24A9E002A8813 /* New新帖 */,
 				3F8883EC1FEE3892007309FB /* main主要 */,
 				3F8884411FEE4814007309FB /* Essence精华 */,
 				3F88842F1FEE4814007309FB /* FriendTrends动态 */,
 				3F8884471FEE4814007309FB /* Me我 */,
 				3F88843B1FEE4814007309FB /* Publish发布 */,
+				3FE072AA1FF24A9E002A8813 /* New新帖 */,
 				3FD443EF1FCD496C0058B3EF /* Main.storyboard */,
 			);
 			path = Main;
@@ -315,6 +323,8 @@
 		3F8884451FEE4814007309FB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				3F5945521FF4EF1D00091435 /* QYHModel.h */,
+				3F5945531FF4EF1D00091435 /* QYHModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -322,6 +332,9 @@
 		3F8884461FEE4814007309FB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				3F5945551FF4F04200091435 /* QYHCustomTableViewCell.h */,
+				3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */,
+				3F5945571FF4F04200091435 /* QYHCustomTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -513,6 +526,7 @@
 		3FD443DE1FCD496C0058B3EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = QYH;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = hao;
 				TargetAttributes = {
@@ -552,6 +566,7 @@
 				3FD443F31FCD496C0058B3EF /* Assets.xcassets in Resources */,
 				3FECB7A21FE9142C006B66C6 /* QyhAlterView.xib in Resources */,
 				3F8884621FEE49B6007309FB /* CustomCollectionViewCell.xib in Resources */,
+				3F5945591FF4F04200091435 /* QYHCustomTableViewCell.xib in Resources */,
 				3FD443F11FCD496C0058B3EF /* Main.storyboard in Resources */,
 				3F61676C1FF4920A0071F7C1 /* QYHTwoViewController.xib in Resources */,
 				3F61677C1FF4BBC50071F7C1 /* QYHCustomLonginview.xib in Resources */,
@@ -566,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F0BE5A21FF0A144007E2F5F /* QYHmuiceViewController.m in Sources */,
+				3F5945581FF4F04200091435 /* QYHCustomTableViewCell.m in Sources */,
 				3F61677B1FF4BBC50071F7C1 /* QYHCustomLonginview.m in Sources */,
 				3F61676F1FF496060071F7C1 /* UIBarButtonItem+Item.m in Sources */,
 				3F0BE5A41FF0A144007E2F5F /* QYHpicerViewController.m in Sources */,
@@ -580,6 +596,7 @@
 				3F61678D1FF4BC4F0071F7C1 /* QYHLongInViewController.m in Sources */,
 				3FECB79D1FE91422006B66C6 /* JKCountDownButton.m in Sources */,
 				3F8884611FEE49B6007309FB /* CustomCollectionViewCell.m in Sources */,
+				3F5945541FF4EF1D00091435 /* QYHModel.m in Sources */,
 				3F8884631FEE49B6007309FB /* MeTableViewController.m in Sources */,
 				3F8883D21FEE3092007309FB /* QYHTool.m in Sources */,
 				3F0BE5A31FF0A144007E2F5F /* QYHworldViewController.m in Sources */,
