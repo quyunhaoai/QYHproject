@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #define QYH_h
 #import "UIView+frame.h"
+#import "UIBarButtonItem+Item.h"
 #import "QYHTool.h"
 
 #import "QYHOneViewController.h"

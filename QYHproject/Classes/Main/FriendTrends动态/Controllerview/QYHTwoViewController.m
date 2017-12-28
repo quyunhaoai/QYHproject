@@ -7,7 +7,7 @@
 //
 
 #import "QYHTwoViewController.h"
-
+#import "QYHLongInViewController.h"
 @interface QYHTwoViewController ()
 
 @end
@@ -17,9 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:0.3 green:0.5 blue:0.3 alpha:1.0];
-    self.title = @"我的朋友";
-}
 
+    [self setupNavBar];
+    
+}
+-(void)setupNavBar
+{
+    self.title = @"我的朋友";
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(friends)];
+}
+- (IBAction)login:(id)sender {
+    QYHLongInViewController *longInVc = [[QYHLongInViewController alloc]initWithNibName:@"QYHLongInViewController" bundle:nil];
+    [self presentViewController:longInVc animated:YES completion:nil];
+}
+-(void)friends{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

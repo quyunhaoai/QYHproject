@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QYH.h"
 @interface QYHTwoViewController : UIViewController
 
 @end
