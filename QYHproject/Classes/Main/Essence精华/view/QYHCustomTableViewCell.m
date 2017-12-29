@@ -7,12 +7,29 @@
 //
 
 #import "QYHCustomTableViewCell.h"
+@interface QYHCustomTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *headIcon;
+@property (weak, nonatomic) IBOutlet UILabel *titleString;
+@property (weak, nonatomic) IBOutlet UILabel *titletime;
+@property (weak, nonatomic) IBOutlet UILabel *content;
 
+@end
 @implementation QYHCustomTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+
+    NSString *imagename = @"defaultUserIcon";
+    self.headIcon.image = [UIImage xmg_circleImageNamed:imagename];
+    
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+}
+-(void)setFrame:(CGRect)frame
+{
+    frame.size.height -= 10;
+    
+    [super setFrame:frame];
+
 }
 -(void)setQYHModel:(QYHModel *)QYHModel
 {

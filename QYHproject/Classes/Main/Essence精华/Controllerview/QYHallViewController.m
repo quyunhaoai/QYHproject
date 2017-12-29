@@ -13,16 +13,17 @@
 //@property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSMutableArray *tableData;
 @end
-static NSString *cellIdentifier = @"qyhcellID";
+static NSString *const cellIdentifier = @"qyhcellID";
 @implementation QYHallViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.tableView.backgroundColor = [UIColor grayColor];
     self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QYHCustomTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
+
 }
 -(NSMutableArray *)tableData
 {

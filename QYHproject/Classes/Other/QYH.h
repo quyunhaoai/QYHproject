@@ -13,6 +13,7 @@
 #import "UIView+frame.h"
 #import "UIBarButtonItem+Item.h"
 #import "QYHTool.h"
+#import "UIImage+Image.h"
 
 #import "QYHOneViewController.h"
 #import "QYHTwoViewController.h"

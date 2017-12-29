@@ -36,57 +36,72 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOC-Y1-T3v">
-                        <rect key="frame" x="5" y="40" width="316" height="178"/>
+                        <rect key="frame" x="5" y="40" width="316" height="176"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-T1-ttM">
-                        <rect key="frame" x="0.0" y="223" width="326" height="50"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-T1-ttM" userLabel="底部view">
+                        <rect key="frame" x="0.0" y="221" width="326" height="52"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="bqe-Jo-33U" userLabel="顶部分割线">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="lyK-EN-Tt1"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIb-DQ-GA8">
-                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="顶" image="mainCellDing"/>
+                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="52"/>
+                                <state key="normal" title="顶" image="mainCellDing">
+                                    <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" image="mainCellDingClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaX-YV-yJX">
-                                <rect key="frame" x="244.5" y="0.0" width="81.5" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="顶" image="mainCellDing"/>
+                                <rect key="frame" x="244.5" y="0.0" width="81.5" height="52"/>
+                                <state key="normal" title="评论" image="mainCellComment">
+                                    <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" image="mainCellCommentClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yne-Ax-JXh">
-                                <rect key="frame" x="163" y="0.0" width="81.5" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="分享" image="mainCellShare"/>
+                                <rect key="frame" x="163" y="0.0" width="81.5" height="52"/>
+                                <state key="normal" title="分享" image="mainCellShare">
+                                    <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" image="mainCellShareClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-1U-ODB">
-                                <rect key="frame" x="81.5" y="0.0" width="81.5" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="踩" image="mainCellCai"/>
+                                <rect key="frame" x="81.5" y="0.0" width="81.5" height="52"/>
+                                <state key="normal" title="踩" image="mainCellCai">
+                                    <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" image="mainCellCaiClick"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JaX-YV-yJX" firstAttribute="leading" secondItem="yne-Ax-JXh" secondAttribute="trailing" id="8J4-Vh-fmg"/>
-                            <constraint firstItem="3eb-1U-ODB" firstAttribute="leading" secondItem="wIb-DQ-GA8" secondAttribute="trailing" id="A8z-E8-QkC"/>
                             <constraint firstItem="3eb-1U-ODB" firstAttribute="width" secondItem="yne-Ax-JXh" secondAttribute="width" id="BsH-Wx-fU7"/>
-                            <constraint firstItem="JaX-YV-yJX" firstAttribute="top" secondItem="1hG-T1-ttM" secondAttribute="top" id="C79-Ls-ZiO"/>
+                            <constraint firstItem="JaX-YV-yJX" firstAttribute="top" secondItem="bqe-Jo-33U" secondAttribute="top" id="C79-Ls-ZiO"/>
                             <constraint firstItem="JaX-YV-yJX" firstAttribute="leading" secondItem="yne-Ax-JXh" secondAttribute="trailing" id="DRu-P4-tRA"/>
-                            <constraint firstAttribute="height" constant="50" id="EjL-7B-80d"/>
+                            <constraint firstAttribute="height" constant="52" id="EjL-7B-80d"/>
                             <constraint firstItem="wIb-DQ-GA8" firstAttribute="width" secondItem="3eb-1U-ODB" secondAttribute="width" id="GNx-JG-UiL"/>
                             <constraint firstAttribute="trailing" secondItem="JaX-YV-yJX" secondAttribute="trailing" id="Hv2-ag-hDW"/>
                             <constraint firstAttribute="bottom" secondItem="JaX-YV-yJX" secondAttribute="bottom" id="J9z-lm-FdF"/>
+                            <constraint firstItem="bqe-Jo-33U" firstAttribute="leading" secondItem="1hG-T1-ttM" secondAttribute="leading" id="JTa-wD-LHo"/>
+                            <constraint firstAttribute="trailing" secondItem="bqe-Jo-33U" secondAttribute="trailing" id="MUb-gM-YKA"/>
                             <constraint firstAttribute="bottom" secondItem="yne-Ax-JXh" secondAttribute="bottom" id="O0p-0e-ui0"/>
                             <constraint firstAttribute="bottom" secondItem="3eb-1U-ODB" secondAttribute="bottom" id="Rui-TE-JS3"/>
-                            <constraint firstItem="yne-Ax-JXh" firstAttribute="top" secondItem="1hG-T1-ttM" secondAttribute="top" id="Srh-UK-U5U"/>
+                            <constraint firstItem="yne-Ax-JXh" firstAttribute="top" secondItem="bqe-Jo-33U" secondAttribute="top" id="Srh-UK-U5U"/>
                             <constraint firstItem="wIb-DQ-GA8" firstAttribute="leading" secondItem="1hG-T1-ttM" secondAttribute="leading" id="Y75-sT-Fk9"/>
                             <constraint firstItem="yne-Ax-JXh" firstAttribute="width" secondItem="JaX-YV-yJX" secondAttribute="width" id="aCW-Gi-fDU"/>
-                            <constraint firstItem="wIb-DQ-GA8" firstAttribute="top" secondItem="1hG-T1-ttM" secondAttribute="top" id="aSP-8w-HAo"/>
-                            <constraint firstItem="yne-Ax-JXh" firstAttribute="leading" secondItem="3eb-1U-ODB" secondAttribute="trailing" id="eJT-MX-WSV"/>
+                            <constraint firstItem="wIb-DQ-GA8" firstAttribute="top" secondItem="bqe-Jo-33U" secondAttribute="top" id="aSP-8w-HAo"/>
                             <constraint firstItem="yne-Ax-JXh" firstAttribute="leading" secondItem="3eb-1U-ODB" secondAttribute="trailing" id="loo-W8-Ogu"/>
                             <constraint firstAttribute="bottom" secondItem="wIb-DQ-GA8" secondAttribute="bottom" id="mfA-tJ-Dgp"/>
                             <constraint firstItem="3eb-1U-ODB" firstAttribute="leading" secondItem="wIb-DQ-GA8" secondAttribute="trailing" id="mpV-q5-UtK"/>
-                            <constraint firstItem="3eb-1U-ODB" firstAttribute="top" secondItem="1hG-T1-ttM" secondAttribute="top" id="sVa-gb-Rbf"/>
+                            <constraint firstItem="3eb-1U-ODB" firstAttribute="top" secondItem="bqe-Jo-33U" secondAttribute="top" id="sVa-gb-Rbf"/>
+                            <constraint firstItem="bqe-Jo-33U" firstAttribute="top" secondItem="1hG-T1-ttM" secondAttribute="top" id="voh-Yz-o0V"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ7-Rv-4do">
@@ -124,15 +139,27 @@
                     <constraint firstItem="1hG-T1-ttM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zg9-5A-sji"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="38" y="169"/>
+            <connections>
+                <outlet property="content" destination="mOC-Y1-T3v" id="ldZ-Nr-mp5"/>
+                <outlet property="headIcon" destination="JHy-S8-ZOW" id="7rS-S3-TOn"/>
+                <outlet property="titleString" destination="aW0-nu-ipX" id="dql-Rf-FSz"/>
+                <outlet property="titletime" destination="Phd-nD-4Oh" id="Ru9-gF-Uk5"/>
+            </connections>
+            <point key="canvasLocation" x="-168" y="168"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cell-button-line" width="1" height="29"/>
         <image name="cellmorebtnclick" width="24" height="20"/>
         <image name="cellmorebtnnormal" width="24" height="20"/>
         <image name="defaultUserIcon" width="50" height="50"/>
         <image name="mainCellCai" width="20" height="20"/>
+        <image name="mainCellCaiClick" width="20" height="20"/>
+        <image name="mainCellComment" width="20" height="20"/>
+        <image name="mainCellCommentClick" width="20" height="20"/>
         <image name="mainCellDing" width="20" height="20"/>
+        <image name="mainCellDingClick" width="20" height="20"/>
         <image name="mainCellShare" width="20" height="20"/>
+        <image name="mainCellShareClick" width="23" height="23"/>
     </resources>
 </document>

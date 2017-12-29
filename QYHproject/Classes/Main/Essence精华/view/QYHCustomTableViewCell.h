@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "QYHModel.h"
+#import "QYH.h"
 @interface QYHCustomTableViewCell : UITableViewCell
 
 /*
