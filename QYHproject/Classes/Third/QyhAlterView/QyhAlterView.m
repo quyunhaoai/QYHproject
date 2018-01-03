@@ -71,7 +71,7 @@ static CancelBlock _cancelBlock;
     [self sharedView].continueBtn.layer.cornerRadius = 15;
     [self sharedView].continueBtn.layer.masksToBounds = YES;
     [[self sharedView].continueBtn setTitle:otherButtonTitle forState:UIControlStateNormal];
-    if (statue == COUNTDOWN)
+    if (statue == AlterViewStatueCOUNTDOWN)
     {
         [self sharedView].statueDec_lab.text = message;
         [self sharedView].statueIcon_image.hidden = YES;
@@ -99,11 +99,11 @@ static CancelBlock _cancelBlock;
         [self sharedView].countDown_Lab.hidden = YES;
         [self sharedView].statueIcon_image.hidden = NO;
         [self sharedView].statueIcon_image.image = [UIImage imageNamed:imageUrl];
-        if (statue == NORMALSTYLE)
+        if (statue == AlterViewStatueNORMALSTYLE)
         {
             [self sharedView].statueDec_lab.text = message;
         }
-        else if(statue == SHOWORIGIN)
+        else if(statue == AlterViewStatueSHOWORIGIN)
         {
             NSString* statueDec = [NSString stringWithFormat:@"●●● %@ ●●●",message];
             NSMutableAttributedString *statueDecAttri = [[NSMutableAttributedString alloc] initWithString:statueDec];

@@ -14,6 +14,7 @@
 #import "UIBarButtonItem+Item.h"
 #import "QYHTools.h"
 #import "UIImage+Image.h"
+#import "QyhAlterView.h"
 
 #import "QYHOneViewController.h"
 #import "QYHTwoViewController.h"
@@ -27,4 +28,5 @@
 #define TitleBarHeight 35
 #define TabBarHeight 49
 #define TableCellRowHeight 35
+#define APPFont 14
 #endif /* QYH_h */

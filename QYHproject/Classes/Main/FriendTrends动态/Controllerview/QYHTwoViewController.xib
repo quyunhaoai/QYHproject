@@ -24,6 +24,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="qRR-n9-2sx"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="立即登录注册" backgroundImage="friendsTrend_login">
                         <color key="titleColor" red="1" green="0.14139057420000001" blue="0.1084122268" alpha="1" colorSpace="calibratedRGB"/>
                     </state>

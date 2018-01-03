@@ -38,6 +38,7 @@
     
     
 }
+
 #pragma mark --QYHCustomTabBarDeletage
 -(void)tabBar:(QYHCustomTabBar *)tabBar index:(NSUInteger)index{
     self.selectedIndex = index;
@@ -51,8 +52,12 @@
     [self.view addSubview:tabBar];
     tabBar.items = self.items;
     tabBar.delegate = self;
+    
 }
-
+-(void)viewDidLayoutSubviews
+{
+    
+}
 -(void)setupChildview{
     
     

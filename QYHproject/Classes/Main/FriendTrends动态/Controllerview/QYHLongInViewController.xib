@@ -29,8 +29,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwW-su-pJp" userLabel="TopView">
                     <rect key="frame" x="0.0" y="10" width="375" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwN-ZI-A4n">
-                            <rect key="frame" x="10" y="0.0" width="44" height="44"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwN-ZI-A4n">
+                            <rect key="frame" x="10" y="0.0" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="0gu-Hj-P5E"/>
                             </constraints>
@@ -40,11 +40,12 @@
                                 <action selector="closeVC:" destination="-1" eventType="touchUpInside" id="UWL-zF-xTO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3N-NE-kyh">
-                            <rect key="frame" x="290" y="0.0" width="75" height="44"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3N-NE-kyh">
+                            <rect key="frame" x="290" y="0.0" width="75" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="Lah-Ju-Yqs"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="注册"/>
                             <state key="selected" title="已注册"/>
                             <connections>

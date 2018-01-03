@@ -10,10 +10,14 @@
 #import "QYHCustomLonginview.h"
 #import "QYHfastLongin.h"
 #import "UIView+frame.h"
-@interface QYHLongInViewController ()
+@interface QYHLongInViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *middleView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leadConstraints;
+@property (weak, nonatomic) UITextField *loginName;
+@property (weak, nonatomic) UITextField *loginPassword;
+@property (weak, nonatomic) UITextField *registerName;
+@property (weak, nonatomic) UITextField *registerPassword;
 
 @end
 
@@ -41,7 +45,16 @@
         
     });
     
+    self.loginName = [longVc viewWithTag:100];
+    self.loginPassword = [longVc viewWithTag:101];
     
+    self.registerName = [registerVc viewWithTag:110];
+    self.registerPassword = [registerVc viewWithTag:111];
+    
+    self.loginName.delegate = self;
+    self.loginPassword.delegate = self;
+    self.registerPassword.delegate = self;
+    self.registerName.delegate = self;
 }
 
 
@@ -83,8 +96,20 @@
         [self.view layoutIfNeeded];
     }];
 }
-
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.loginPassword resignFirstResponder];
+    [self.loginName resignFirstResponder];
+    
+    [self.registerPassword resignFirstResponder];
+    [self.registerName resignFirstResponder];
+    
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 /*
 #pragma mark - Navigation
 

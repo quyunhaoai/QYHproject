@@ -9,9 +9,9 @@
 typedef void (^DismissBlock)(NSInteger buttonIndex);
 typedef void (^CancelBlock)(void);
 typedef enum {
-    SHOWORIGIN = 0, //显示原点
-    NORMALSTYLE = 1,//正常样式
-    COUNTDOWN = 2,//倒计时
+    AlterViewStatueSHOWORIGIN = 0, //显示原点
+    AlterViewStatueNORMALSTYLE = 1,//正常样式
+    AlterViewStatueCOUNTDOWN = 2,//倒计时
 } AlterViewStatue;
 @interface QyhAlterView : UIView
 

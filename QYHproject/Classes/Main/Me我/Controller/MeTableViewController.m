@@ -10,36 +10,62 @@
 #import "CustomCollectionViewCell.h"
 #import "person.h"
 #import "QyhAlterView.h"
+#import "QYHSettingTableViewController.h"
+#import "QYHCustomTabBar.h"
 static NSString *const ID = @"cellid";
 @interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *CollectionData;
 @end
 
 @implementation MeTableViewController
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"%s",__FUNCTION__);
-    [QyhAlterView showAlterViewStatue:NORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5 onDismiss:^(NSInteger buttonIndex) {
-        
-    } onCancel:^{
-        
-    }];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我";
+    //设置导航条
+    [self setupNavBar];
     //设置footView
     [self setupFootView];
+    
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
     NSLog(@"%@",NSStringFromCGRect(self.tableView.frame));
 
 }
+-(void)setupNavBar
+{
+    self.title = @"我";
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setViewControllers)];
+    UIBarButtonItem *nightItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] highImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night)];
+    self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
+}
+-(void)setViewControllers{
+    QYHSettingTableViewController *setVC = [[QYHSettingTableViewController alloc]init];
+    setVC.hidesBottomBarWhenPushed = YES;
+//    for (UIView *vc in self.tabBarController.view.subviews) {
+//        if ([vc isKindOfClass:[QYHCustomTabBar class]]) {
+//            vc.hidden = YES;
+//        }
+//    }
+    [self.navigationController pushViewController:setVC animated:YES];
+}
+-(void)night{
+    
+}
+#pragma mark TableView-Delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return TableCellRowHeight;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s",__FUNCTION__);
+    [QyhAlterView showAlterViewStatue:AlterViewStatueNORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5 onDismiss:^(NSInteger buttonIndex) {
+        
+    } onCancel:^{
+        
+    }];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 -(void)setupFootView
 {
@@ -81,7 +107,7 @@ static NSString *const ID = @"cellid";
 - (IBAction)returnTopController:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+#pragma mark UIcollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.CollectionData.count;
@@ -95,7 +121,7 @@ static NSString *const ID = @"cellid";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__FUNCTION__);
-    [QyhAlterView showAlterViewStatue:SHOWORIGIN message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5  onDismiss:^(NSInteger buttonIndex) {
+    [QyhAlterView showAlterViewStatue:AlterViewStatueNORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5  onDismiss:^(NSInteger buttonIndex) {
         
     } onCancel:^{
         

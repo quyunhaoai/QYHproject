@@ -39,6 +39,7 @@
 + (UIBarButtonItem *)backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title{
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setTitle:title forState:UIControlStateNormal];
+    [backButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [backButton setImage:image forState:UIControlStateNormal];
     [backButton setImage:highImage forState:UIControlStateHighlighted];
     [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

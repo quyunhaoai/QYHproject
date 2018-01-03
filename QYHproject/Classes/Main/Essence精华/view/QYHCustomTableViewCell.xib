@@ -52,6 +52,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIb-DQ-GA8">
                                 <rect key="frame" x="0.0" y="0.0" width="81.5" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="顶" image="mainCellDing">
                                     <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -59,6 +60,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaX-YV-yJX">
                                 <rect key="frame" x="244.5" y="0.0" width="81.5" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="评论" image="mainCellComment">
                                     <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -66,6 +68,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yne-Ax-JXh">
                                 <rect key="frame" x="163" y="0.0" width="81.5" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="分享" image="mainCellShare">
                                     <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -73,6 +76,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-1U-ODB">
                                 <rect key="frame" x="81.5" y="0.0" width="81.5" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="踩" image="mainCellCai">
                                     <color key="titleColor" red="0.054915450929999998" green="0.054915450929999998" blue="0.054915450929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
