@@ -23,7 +23,7 @@
 }
 -(void)setupNavBar
 {
-    self.title = @"我的朋友";
+    self.title = @"动态";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(friends)];
 }
 - (IBAction)login:(id)sender {

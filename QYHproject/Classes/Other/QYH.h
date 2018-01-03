@@ -12,7 +12,7 @@
 #define QYH_h
 #import "UIView+frame.h"
 #import "UIBarButtonItem+Item.h"
-#import "QYHTool.h"
+#import "QYHTools.h"
 #import "UIImage+Image.h"
 
 #import "QYHOneViewController.h"
@@ -26,4 +26,5 @@
 #define NavBarHeight 64
 #define TitleBarHeight 35
 #define TabBarHeight 49
+#define TableCellRowHeight 35
 #endif /* QYH_h */

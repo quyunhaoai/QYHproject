@@ -24,6 +24,7 @@ static NSString *const ID = @"cellid";
     } onCancel:^{
         
     }];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +36,10 @@ static NSString *const ID = @"cellid";
     self.tableView.sectionFooterHeight = 10;
     NSLog(@"%@",NSStringFromCGRect(self.tableView.frame));
 
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return TableCellRowHeight;
 }
 -(void)setupFootView
 {
@@ -95,6 +100,7 @@ static NSString *const ID = @"cellid";
     } onCancel:^{
         
     }];
+    
 }
 
 //#pragma mark - Table view data source

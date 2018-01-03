@@ -7,6 +7,7 @@
 //
 
 #import "CustomCollectionViewCell.h"
+#import "QYH.h"
 @interface CustomCollectionViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UIImageView *headimage;
@@ -17,12 +18,15 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self.name sizeToFit];
+
 }
 -(void)setHead:(headicon *)Head
 {
     _Head = Head;
-    self.headimage.image = [UIImage imageNamed:Head.iconUrl];
+    self.headimage.image = [UIImage xmg_circleImageNamed:Head.iconUrl];
     self.name.text = Head.name;
+    
 
 }
 

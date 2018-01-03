@@ -20,46 +20,58 @@
                         <sections>
                             <tableViewSection id="a2c-FP-6pg">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="QuG-6d-CSR">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="35" id="QuG-6d-CSR">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QuG-6d-CSR" id="I6n-Bf-Evi">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="34.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-xi-oEZ">
-                                                    <rect key="frame" x="84" y="11" width="75" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setup-head-default" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-0H-6Wn">
+                                                    <rect key="frame" x="20" y="5" width="25" height="24.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="VYK-2f-zee"/>
+                                                        <constraint firstAttribute="height" constant="25" id="pBW-oV-iNn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wd-xi-oEZ">
+                                                    <rect key="frame" x="50" y="9" width="62" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setup-head-default" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-0H-6Wn">
-                                                    <rect key="frame" x="8" y="0.0" width="76" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g0n-0H-6Wn" firstAttribute="leading" secondItem="I6n-Bf-Evi" secondAttribute="leading" constant="20" id="CMF-Vi-phZ"/>
+                                                <constraint firstItem="3wd-xi-oEZ" firstAttribute="leading" secondItem="g0n-0H-6Wn" secondAttribute="trailing" constant="5" id="FXL-gX-tQg"/>
+                                                <constraint firstAttribute="bottom" secondItem="g0n-0H-6Wn" secondAttribute="bottom" constant="5" id="bHo-1u-nfx"/>
+                                                <constraint firstItem="g0n-0H-6Wn" firstAttribute="top" secondItem="I6n-Bf-Evi" secondAttribute="top" constant="5" id="jKz-pa-BYD"/>
+                                                <constraint firstItem="3wd-xi-oEZ" firstAttribute="centerY" secondItem="I6n-Bf-Evi" secondAttribute="centerY" id="xZS-2K-Bg6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="hz9-uK-jgj">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="v4s-aX-7og">
-                                        <rect key="frame" x="0.0" y="115" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="35" id="v4s-aX-7og">
+                                        <rect key="frame" x="0.0" y="106" width="375" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v4s-aX-7og" id="NgN-pz-SHP">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="34.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="离线下载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-eQ-W7b">
-                                                    <rect key="frame" x="84" y="11" width="70" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="离线下载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-eQ-W7b">
+                                                    <rect key="frame" x="20" y="9" width="57.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="o6o-eQ-W7b" firstAttribute="centerY" secondItem="NgN-pz-SHP" secondAttribute="centerY" id="JXT-i1-YWd"/>
+                                                <constraint firstItem="o6o-eQ-W7b" firstAttribute="leading" secondItem="NgN-pz-SHP" secondAttribute="leading" constant="20" id="x6P-ay-dce"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

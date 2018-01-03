@@ -29,7 +29,7 @@
     // 只要是通过模型设置,都是通过富文本设置
     // 设置导航条标题 => UINavigationBar
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:17];
+    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:16];
     [navBar setTitleTextAttributes:attrs];
     
     // 设置导航条背景图片

@@ -138,7 +138,6 @@
                         <constraint firstAttribute="height" constant="30" id="20u-Wv-1Rc"/>
                     </constraints>
                     <state key="normal" title="注册" backgroundImage="loginBtnBg"/>
-                    <state key="highlighted" backgroundImage="loginBtnBgClick"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -155,7 +154,6 @@
     </objects>
     <resources>
         <image name="loginBtnBg" width="55" height="45"/>
-        <image name="loginBtnBgClick" width="55" height="45"/>
         <image name="login_rgister_textfield_bg" width="266" height="92"/>
     </resources>
 </document>
