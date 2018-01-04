@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QYHTagItem.h"
 @interface QYHTagTableViewCell : UITableViewCell
+/*
+ 模型数据
+ */
+@property (nonatomic,strong) QYHTagItem *itme;
+@property (weak, nonatomic) IBOutlet UIImageView *TagImang;
+@property (weak, nonatomic) IBOutlet UILabel *TagTitle;
+@property (weak, nonatomic) IBOutlet UILabel *ContLable;
+@property (weak, nonatomic) IBOutlet UIButton *TagButton;
 
 @end

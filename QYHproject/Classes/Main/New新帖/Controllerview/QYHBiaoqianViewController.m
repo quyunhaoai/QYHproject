@@ -8,9 +8,22 @@
 
 #import "QYHBiaoqianViewController.h"
 #import "QYHCustomTabBar.h"
+#import "QYHTagItem.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import "QYHConst.h"
 @interface QYHBiaoqianViewController ()
-
+/*
+ 数据模型数组
+ */
+@property (nonatomic,strong) NSArray *SubTag;
+/*
+ 
+ */
+@property (nonatomic,weak) AFHTTPSessionManager *mgr;
 @end
+
 static NSString *const cellID = @"cellID";
 @implementation QYHBiaoqianViewController
 -(void)viewWillAppear:(BOOL)animated
@@ -22,16 +35,51 @@ static NSString *const cellID = @"cellID";
             //            [vc removeFromSuperview];
         }
     }
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setNavBar];
 
+    [self loadData];
+    
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QYHTagTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:220/256.0 green:220/256.0 blue:221/256.0 alpha:1.0];
     
+//    self.tableView.bounces = NO;
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    
+    [SVProgressHUD dismiss];
+    
+    [_mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+}
+-(void)loadData
+{
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    _mgr = mgr;
+    [SVProgressHUD showWithStatus:@"正在加载中..."];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters [@"a"] = @"tag_recommend";
+    parameters [@"action"] = @"sub";
+    parameters [@"c"] = @"topic";
+    NSLog(@"parameters:%@",parameters);
+    [mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+        _SubTag = [QYHTagItem mj_objectArrayWithKeyValuesArray:responseObject];
+        [SVProgressHUD dismiss];
+        
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 -(void)setNavBar
 {
@@ -55,19 +103,25 @@ static NSString *const cellID = @"cellID";
 */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 20;
+    return self.SubTag.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     QYHTagTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    
+    cell.itme = (QYHTagItem *)self.SubTag[indexPath.row];
     // Configure the cell...
     
     return cell;
 }
-
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80.0;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

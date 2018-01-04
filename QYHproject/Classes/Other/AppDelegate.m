@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "QYHTabbarViewController.h"
+#import "CustomerViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,9 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    QYHTabbarViewController *tabBar = [[QYHTabbarViewController alloc] init];
+    CustomerViewController *AdVC = [[CustomerViewController alloc] init];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = tabBar;
+    self.window.rootViewController = AdVC;
     [self.window makeKeyAndVisible];
     
     

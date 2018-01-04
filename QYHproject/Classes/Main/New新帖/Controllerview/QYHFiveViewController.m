@@ -35,7 +35,6 @@
 - (void)tagClick
 {
     // 进入推荐标签界面
-   
     QYHBiaoqianViewController *TagVC = [[QYHBiaoqianViewController alloc]init];
     TagVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:TagVC animated:YES];
