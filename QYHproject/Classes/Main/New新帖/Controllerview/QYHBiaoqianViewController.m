@@ -12,7 +12,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
-#import "QYHConst.h"
+
 @interface QYHBiaoqianViewController ()
 /*
  数据模型数组

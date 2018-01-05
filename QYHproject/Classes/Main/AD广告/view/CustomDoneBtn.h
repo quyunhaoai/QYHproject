@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomDoneBtn : UIButton
+@property (nonatomic,strong) NSTimer *timer;
 - (instancetype)initWithFrame:(CGRect)frame time:(int)mytime;
 @property (copy, nonatomic) void (^completionHandler)();
 

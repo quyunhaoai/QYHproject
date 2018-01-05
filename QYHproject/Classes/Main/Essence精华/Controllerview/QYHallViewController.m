@@ -5,13 +5,21 @@
 //  Created by hao on 2017/12/1.
 //  Copyright © 2017年 hao. All rights reserved.
 //
-#import "QYH.h"
+
 #import "QYHModel.h"
 #import "QYHallViewController.h"
 #import "QYHCustomTableViewCell.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+
 @interface QYHallViewController ()<UITableViewDelegate,UITableViewDataSource>
 //@property (nonatomic, strong) UITableView *tableview;
-@property (nonatomic, strong) NSMutableArray *tableData;
+/*网络请求*/
+@property (nonatomic,strong) AFHTTPSessionManager *mgr;
+@property (nonatomic, strong) NSMutableArray<QYHModel *> *tableData;
+-(QYHTopicType)type;
 @end
 static NSString *const cellIdentifier = @"qyhcellID";
 @implementation QYHallViewController
@@ -24,18 +32,95 @@ static NSString *const cellIdentifier = @"qyhcellID";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QYHCustomTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
 
+    __weak typeof (self) KweakSelf = self;
+    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        [KweakSelf requestDownData];
+    }];
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [KweakSelf requestUpData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    [SVProgressHUD showWithStatus:@"正在加载中..."];
 }
+-(AFHTTPSessionManager *)mgr
+{
+    if (_mgr == nil) {
+        _mgr = [AFHTTPSessionManager manager];
+    }
+    return _mgr;
+}
+#pragma mark - 数据处理
+- (QYHTopicType)type
+{
+    return QYHTopicTypePicture;
+}
+-(void)requestUpData
+{
+    NSLog(@"%s",__FUNCTION__);
+
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(self.type);
+    [self.mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        [SVProgressHUD dismiss];
+        
+        [self.tableView.mj_footer endRefreshing];
+        
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [SVProgressHUD dismiss];
+        
+        [self.tableView.mj_footer endRefreshing];
+    }];
+    
+}
+-(void)requestDownData
+{
+
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(self.type);
+    [self.mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        self.tableData = [QYHModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [self.tableView reloadData];
+        
+        [self.tableView.mj_header endRefreshing];
+        
+        [SVProgressHUD dismiss];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [SVProgressHUD dismiss];
+        
+        [self.tableView.mj_header endRefreshing];
+    }];
+}
+      /**
 -(NSMutableArray *)tableData
 {
     if (_tableData == nil) {
         _tableData = [NSMutableArray array];
+  
         for (int i = 0; i < 20; i ++) {
             [_tableData addObject:[NSString stringWithFormat:@"%d",i]];
         }
-        
+
     }
     return _tableData;
 }
+               **/
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -49,6 +134,13 @@ static NSString *const cellIdentifier = @"qyhcellID";
 //    CGFloat y = 0;
 //    self.view.qyh_y = y;
 //    self.tableView.qyh_y = y;
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    [SVProgressHUD dismiss];
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
 }
 -(void)setupTableView
 {
@@ -73,16 +165,8 @@ static NSString *const cellIdentifier = @"qyhcellID";
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    static NSString *cellID = @"qyhcell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",self.class,self.tableData[indexPath.row]];
-     */
     QYHCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.QYHModel = nil;
+    cell.QYHModel = self.tableData[indexPath.row];
     return cell;
 }
 

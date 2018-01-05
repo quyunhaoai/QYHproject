@@ -8,6 +8,7 @@
 
 #import "CustomCollectionViewCell.h"
 #import "QYH.h"
+#import "UIImageView+WebCache.h"
 @interface CustomCollectionViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UIImageView *headimage;
@@ -24,7 +25,8 @@
 -(void)setHead:(headicon *)Head
 {
     _Head = Head;
-    self.headimage.image = [UIImage xmg_circleImageNamed:Head.iconUrl];
+//    UIImage *image = [UIImage imageNamed:@""];
+    [self.headimage sd_setImageWithURL:[NSURL URLWithString:Head.icon] ];
     self.name.text = Head.name;
     
 

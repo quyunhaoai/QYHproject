@@ -13,18 +13,18 @@
 @property (weak, nonatomic) IBOutlet UIImageView *LaunchScreen;
 @property (retain, nonatomic) UIImageView *customPrepLoadingActView;
 @property (weak, nonatomic) IBOutlet CustomDoneBtn *mybutton;
-@property (weak, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) CustomDoneBtn *jumpBut;
+//@property (weak, nonatomic) NSTimer *timer;
 @end
 
 
 @implementation CustomerViewController
 
-- (IBAction)chickAction:(id )sender {
+- (IBAction)clickAction:(id )sender {
     QYHTabbarViewController *vc = [[QYHTabbarViewController alloc] init];
     
     [UIApplication sharedApplication].keyWindow.rootViewController = vc;
-    [self.timer invalidate];
-    
+    [self.jumpBut.timer invalidate];
 }
 
 - (UIImageView *)customPrepLoadingActView {
@@ -48,23 +48,36 @@
     }];
     
 }
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self startAnimation:0];
-    
+    NSLog(@"launchScreen:%@",NSStringFromCGRect(self.LaunchScreen.frame));
     [self.view addSubview:self.customPrepLoadingActView];
     
     UIImage * image = [self getTheLaunchImage];
     self.LaunchScreen.image = image;
+    CGRect frame = CGRectMake([UIScreen mainScreen].bounds.size.width-85, 20, 70, 35);
+    self.jumpBut = [[CustomDoneBtn alloc] initWithFrame:frame time:10];
+    __weak typeof (self) KweakSelf = self;
+    _jumpBut.completionHandler = ^{
+        [KweakSelf clickAction:nil];
+    };
+    [self.view addSubview:_jumpBut];
     
+/*
     self.mybutton.layer.cornerRadius = 6;
     self.mybutton.layer.masksToBounds = YES;
-    
+    self.mybutton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-    /*
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(loadInView)];
     [self.view addGestureRecognizer:tap];
-    */
+*/
 }
 -(void)loadInView
 {
@@ -106,7 +119,7 @@
     NSLog(@"%s",__FUNCTION__);
     static int i = 10;
     if (i == 0) {
-        [self chickAction:nil];
+        [self clickAction:nil];
     }
     i --;
     [self.mybutton setTitle:[NSString stringWithFormat:@"跳过(%d)",i] forState:UIControlStateNormal];

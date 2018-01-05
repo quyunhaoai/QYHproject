@@ -12,9 +12,16 @@
 #import "QyhAlterView.h"
 #import "QYHSettingTableViewController.h"
 #import "QYHCustomTabBar.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
 static NSString *const ID = @"cellid";
+static NSInteger const  cols = 4;
+static CGFloat const mar = 1;
+#define itemKH     ([UIScreen mainScreen].bounds.size.width - (cols - mar))/cols
 @interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *CollectionData;
+/** collection **/
+@property (nonatomic,strong) UICollectionView *collection;
 @end
 
 @implementation MeTableViewController
@@ -31,26 +38,60 @@ static NSString *const ID = @"cellid";
     self.tableView.sectionFooterHeight = 10;
     NSLog(@"%@",NSStringFromCGRect(self.tableView.frame));
 
+    [self loadData];
+}
+-(void)loadData{
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters [@"a"] = @"square";
+    parameters [@"c"] = @"topic";
+    [mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.CollectionData = [headicon mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
+        
+        NSInteger count = _CollectionData.count;
+        NSInteger row = (count - 1) / cols +1;
+        NSInteger rowMarin = row -1;
+        self.collection.qyh_height = row * itemKH + rowMarin;
+        
+        [self resloveData];
+        
+        self.tableView.tableFooterView = self.collection;
+        
+        [self.collection reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+}
+-(void)resloveData
+{
+    NSInteger count = self.CollectionData.count;
+    NSInteger exter = count % cols;
+    
+    if (exter) {
+        exter = cols - exter;
+        for (int i = 0; i < exter; i++) {
+            headicon *head = [[headicon alloc] init];
+            [self.CollectionData addObject:head];
+        }
+    }
 }
 -(void)setupNavBar
 {
     self.title = @"我";
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setViewControllers)];
-    UIBarButtonItem *nightItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] highImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night)];
-    self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
+
+    UIBarButtonItem *night = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
+    self.navigationItem.rightBarButtonItems = @[settingItem,night];
 }
 -(void)setViewControllers{
     QYHSettingTableViewController *setVC = [[QYHSettingTableViewController alloc]init];
     setVC.hidesBottomBarWhenPushed = YES;
-//    for (UIView *vc in self.tabBarController.view.subviews) {
-//        if ([vc isKindOfClass:[QYHCustomTabBar class]]) {
-//            vc.hidden = YES;
-//        }
-//    }
+
     [self.navigationController pushViewController:setVC animated:YES];
 }
--(void)night{
-    
+-(void)night:(UIButton *)button{
+    button.selected = !button.selected;
 }
 #pragma mark TableView-Delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,7 +101,7 @@ static NSString *const ID = @"cellid";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__FUNCTION__);
-    [QyhAlterView showAlterViewStatue:AlterViewStatueNORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5 onDismiss:^(NSInteger buttonIndex) {
+    [QyhAlterView showAlterViewStatue:AlterViewStatueNORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:3 onDismiss:^(NSInteger buttonIndex) {
         
     } onCancel:^{
         
@@ -94,7 +135,8 @@ static NSString *const ID = @"cellid";
     collectionview.scrollEnabled = NO;
 
     [collectionview registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
-    
+    self.collection = collectionview;
+/**
     _CollectionData = [NSMutableArray array];
     for (int i = 0; i < 12; i ++) {
         person *head = [[person alloc] init];
@@ -102,7 +144,7 @@ static NSString *const ID = @"cellid";
         head.name = [NSString stringWithFormat:@"qyh%d",i];
         [_CollectionData addObject:head];
     }
-    
+ **/
 }
 - (IBAction)returnTopController:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -121,7 +163,7 @@ static NSString *const ID = @"cellid";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__FUNCTION__);
-    [QyhAlterView showAlterViewStatue:AlterViewStatueNORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:5  onDismiss:^(NSInteger buttonIndex) {
+    [QyhAlterView showAlterViewStatue:AlterViewStatueNORMALSTYLE message:@"开发中" topImageUrl:@"header_cry_icon" cancelButtonTitle:@"Cancel" otherButtonTitle:@"Done" times:3  onDismiss:^(NSInteger buttonIndex) {
         
     } onCancel:^{
         

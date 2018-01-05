@@ -10,5 +10,7 @@
 
 @interface headicon : NSObject
 @property (nonatomic,strong)NSString *name;
-@property (nonatomic,strong)NSString *iconUrl;
+@property (nonatomic,strong)NSString *icon;
+/** url **/
+@property (nonatomic,strong) NSString* url;
 @end

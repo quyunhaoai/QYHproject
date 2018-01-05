@@ -12,17 +12,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CustomCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-Dy-1lS">
-                        <rect key="frame" x="5" y="5" width="50" height="28"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-Dy-1lS">
+                        <rect key="frame" x="15" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="i4v-TA-eCW"/>
+                            <constraint firstAttribute="width" constant="50" id="lOX-be-wPJ"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxQ-KE-Ygh">
-                        <rect key="frame" x="0.0" y="38" width="60" height="17"/>
+                        <rect key="frame" x="0.0" y="55" width="80" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,20 +35,20 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="NlT-Dy-1lS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="06R-XL-8Vp"/>
                 <constraint firstItem="NlT-Dy-1lS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="1ti-hd-DWQ"/>
-                <constraint firstAttribute="trailing" secondItem="NlT-Dy-1lS" secondAttribute="trailing" constant="5" id="Byb-82-CHG"/>
-                <constraint firstItem="gxQ-KE-Ygh" firstAttribute="top" secondItem="NlT-Dy-1lS" secondAttribute="bottom" constant="5" id="Ee0-qM-MRL"/>
+                <constraint firstAttribute="trailing" secondItem="NlT-Dy-1lS" secondAttribute="trailing" constant="15" id="Byb-82-CHG"/>
                 <constraint firstItem="gxQ-KE-Ygh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vnp-PU-Rms"/>
                 <constraint firstAttribute="trailing" secondItem="gxQ-KE-Ygh" secondAttribute="trailing" id="XRP-YT-Z4u"/>
                 <constraint firstAttribute="bottom" secondItem="gxQ-KE-Ygh" secondAttribute="bottom" constant="5" id="fRe-hy-xdk"/>
+                <constraint firstItem="gxQ-KE-Ygh" firstAttribute="top" secondItem="NlT-Dy-1lS" secondAttribute="bottom" id="fej-3N-Y3V"/>
+                <constraint firstItem="NlT-Dy-1lS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="iik-Bo-YBl"/>
             </constraints>
-            <size key="customSize" width="122" height="110"/>
+            <size key="customSize" width="122" height="125"/>
             <connections>
                 <outlet property="headimage" destination="NlT-Dy-1lS" id="FEm-ma-Xuc"/>
                 <outlet property="name" destination="gxQ-KE-Ygh" id="gT1-sj-hfa"/>
             </connections>
-            <point key="canvasLocation" x="70" y="84"/>
+            <point key="canvasLocation" x="70" y="91.5"/>
         </collectionViewCell>
     </objects>
 </document>

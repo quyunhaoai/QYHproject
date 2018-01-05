@@ -10,7 +10,7 @@
 
 @interface CustomDoneBtn ()
 @property (nonatomic,strong) UILabel *timeLab;
-@property (nonatomic,strong) NSTimer *timer;
+//@property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,assign) int fireTime;
 @end
 
