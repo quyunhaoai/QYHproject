@@ -69,7 +69,7 @@ CGFloat  const marin=10;
 -(void)setupTitleView
 {
     NSArray *titles = @[@"全部",@"视频",@"音乐",@"图片",@"段子"];
-    UIView *titleview = [[UIView alloc]initWithFrame:CGRectMake(0, NavBarHeight, ScreenW, TitleBarHeight)];
+    UIView *titleview = [[UIView alloc]initWithFrame:CGRectMake(0, bottomMargin, ScreenW, TitleBarHeight)];
     [titleview setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.5]];
     [self.view addSubview:titleview];
     self.titleView = titleview;

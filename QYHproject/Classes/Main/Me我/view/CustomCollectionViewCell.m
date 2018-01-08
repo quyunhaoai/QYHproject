@@ -28,8 +28,6 @@
 //    UIImage *image = [UIImage imageNamed:@""];
     [self.headimage sd_setImageWithURL:[NSURL URLWithString:Head.icon] ];
     self.name.text = Head.name;
-    
-
 }
 
 @end

@@ -30,5 +30,8 @@
 #define TabBarHeight 49
 #define TableCellRowHeight 35
 #define APPFont 14
+#define kScreenH   [UIScreen mainScreen].bounds.size.height
+#define isIPhoneX kScreenH==812
+#define bottomMargin (isIPhoneX ? 84 : 64)
 #endif /* QYH_h */
 

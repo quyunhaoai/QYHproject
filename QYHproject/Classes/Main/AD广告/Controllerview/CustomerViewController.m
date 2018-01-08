@@ -9,12 +9,17 @@
 #import "CustomerViewController.h"
 #import "QYHTabbarViewController.h"
 #import "CustomDoneBtn.h"
+#import "QYH.h"
 @interface CustomerViewController ()
+{
+    NSInteger number;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *LaunchScreen;
 @property (retain, nonatomic) UIImageView *customPrepLoadingActView;
 @property (weak, nonatomic) IBOutlet CustomDoneBtn *mybutton;
 @property (strong, nonatomic) CustomDoneBtn *jumpBut;
 //@property (weak, nonatomic) NSTimer *timer;
+
 @end
 
 
@@ -48,10 +53,10 @@
     }];
     
 }
--(void)awakeFromNib
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super awakeFromNib];
-
+    [super viewWillAppear:YES];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,7 +66,7 @@
     
     UIImage * image = [self getTheLaunchImage];
     self.LaunchScreen.image = image;
-    CGRect frame = CGRectMake([UIScreen mainScreen].bounds.size.width-85, 20, 70, 35);
+    CGRect frame = CGRectMake([UIScreen mainScreen].bounds.size.width-85, isIPhoneX? 40 : 20, 70, 35);
     self.jumpBut = [[CustomDoneBtn alloc] initWithFrame:frame time:10];
     __weak typeof (self) KweakSelf = self;
     _jumpBut.completionHandler = ^{
@@ -114,6 +119,7 @@
     return [UIImage imageNamed:launchImage];
     
 }
+/*
 -(void)timerAction
 {
     NSLog(@"%s",__FUNCTION__);
@@ -125,6 +131,7 @@
     [self.mybutton setTitle:[NSString stringWithFormat:@"跳过(%d)",i] forState:UIControlStateNormal];
     
 }
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
