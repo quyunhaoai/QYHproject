@@ -11,5 +11,5 @@
 @interface UITextField (Placeholder)
 
 @property UIColor *placeholderColor;
-- (void)setXmg_Placeholder:(NSString *)placeholder;
+- (void)setqyh_Placeholder:(NSString *)placeholder;
 @end

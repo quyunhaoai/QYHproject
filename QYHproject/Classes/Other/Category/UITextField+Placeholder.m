@@ -14,9 +14,9 @@
 {
     // setPlaceholder
     Method setPlaceholderMethod = class_getInstanceMethod(self, @selector(setPlaceholder:));
-    Method setXmg_PlaceholderMethod = class_getInstanceMethod(self, @selector(setXmg_Placeholder:));
+    Method setqyh_PlaceholderMethod = class_getInstanceMethod(self, @selector(setqyh_Placeholder:));
     
-    method_exchangeImplementations(setPlaceholderMethod, setXmg_PlaceholderMethod);
+    method_exchangeImplementations(setPlaceholderMethod, setqyh_PlaceholderMethod);
 }
 - (void)setPlaceholderColor:(UIColor *)placeholderColor
 {
@@ -40,9 +40,9 @@
 
 // 设置占位文字
 // 设置占位文字颜色
-- (void)setXmg_Placeholder:(NSString *)placeholder
+- (void)setqyh_Placeholder:(NSString *)placeholder
 {
-    [self setXmg_Placeholder:placeholder];
+    [self setqyh_Placeholder:placeholder];
     
     self.placeholderColor = self.placeholderColor;
 }

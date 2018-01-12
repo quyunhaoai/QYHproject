@@ -9,7 +9,10 @@
 #import "UIView+frame.h"
 
 @implementation UIView (frame)
-
++ (instancetype)qyh_viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
 -(void)setQyh_x:(CGFloat)qyh_x
 {
     CGRect frame = self.frame;

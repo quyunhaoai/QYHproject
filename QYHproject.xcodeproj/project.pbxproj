@@ -12,6 +12,9 @@
 		3F0BE5A21FF0A144007E2F5F /* QYHmuiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE5991FF0A141007E2F5F /* QYHmuiceViewController.m */; };
 		3F0BE5A31FF0A144007E2F5F /* QYHworldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */; };
 		3F0BE5A41FF0A144007E2F5F /* QYHpicerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */; };
+		3F3DFD902008A8FE002ADE06 /* QYHPictureview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DFD8F2008A8FE002ADE06 /* QYHPictureview.m */; };
+		3F3DFD922008A917002ADE06 /* QYHPictureview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3DFD912008A917002ADE06 /* QYHPictureview.xib */; };
+		3F3DFD962008AE16002ADE06 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
 		3F5945541FF4EF1D00091435 /* QYHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945531FF4EF1D00091435 /* QYHModel.m */; };
 		3F5945581FF4F04200091435 /* QYHCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */; };
@@ -147,6 +150,11 @@
 		3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHpicerViewController.m; sourceTree = "<group>"; };
 		3F0BE59E1FF0A143007E2F5F /* QYHallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHallViewController.h; sourceTree = "<group>"; };
 		3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHmuiceViewController.h; sourceTree = "<group>"; };
+		3F3DFD8E2008A8FE002ADE06 /* QYHPictureview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHPictureview.h; sourceTree = "<group>"; };
+		3F3DFD8F2008A8FE002ADE06 /* QYHPictureview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHPictureview.m; sourceTree = "<group>"; };
+		3F3DFD912008A917002ADE06 /* QYHPictureview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHPictureview.xib; sourceTree = "<group>"; };
+		3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Download.m"; path = "../../../../../../../../../../Downloads/归档 2/代码/01-BuDeJie-精华的其他模块/BuDeJie/Classes/Other/Category/UIImageView+Download.m"; sourceTree = "<group>"; };
+		3F3DFD952008AE16002ADE06 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Download.h"; path = "../../../../../../../../../../Downloads/归档 2/代码/01-BuDeJie-精华的其他模块/BuDeJie/Classes/Other/Category/UIImageView+Download.h"; sourceTree = "<group>"; };
 		3F43D7861FD125C3008639DF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		3F43D7871FD125C4008639DF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		3F5945521FF4EF1D00091435 /* QYHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHModel.h; sourceTree = "<group>"; };
@@ -390,6 +398,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F3DFD932008AD10002ADE06 /* topVC */ = {
+			isa = PBXGroup;
+			children = (
+				3F0BE59E1FF0A143007E2F5F /* QYHallViewController.h */,
+				3F0BE5981FF0A141007E2F5F /* QYHallViewController.m */,
+				3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */,
+				3F0BE5991FF0A141007E2F5F /* QYHmuiceViewController.m */,
+				3F0BE59A1FF0A142007E2F5F /* QYHpicerViewController.h */,
+				3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */,
+				3F0BE5961FF0A140007E2F5F /* QYHvodieViewController.h */,
+				3F0BE5971FF0A140007E2F5F /* QYHvodieViewController.m */,
+				3F0BE59B1FF0A142007E2F5F /* QYHworldViewController.h */,
+				3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */,
+			);
+			path = topVC;
+			sourceTree = "<group>";
+		};
 		3F4715831FE5096F006E38CB /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,18 +571,9 @@
 		3F8884421FEE4814007309FB /* Controllerview */ = {
 			isa = PBXGroup;
 			children = (
+				3F3DFD932008AD10002ADE06 /* topVC */,
 				3F8884431FEE4814007309FB /* QYHOneViewController.h */,
 				3F8884441FEE4814007309FB /* QYHOneViewController.m */,
-				3F0BE59E1FF0A143007E2F5F /* QYHallViewController.h */,
-				3F0BE5981FF0A141007E2F5F /* QYHallViewController.m */,
-				3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */,
-				3F0BE5991FF0A141007E2F5F /* QYHmuiceViewController.m */,
-				3F0BE59A1FF0A142007E2F5F /* QYHpicerViewController.h */,
-				3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */,
-				3F0BE5961FF0A140007E2F5F /* QYHvodieViewController.h */,
-				3F0BE5971FF0A140007E2F5F /* QYHvodieViewController.m */,
-				3F0BE59B1FF0A142007E2F5F /* QYHworldViewController.h */,
-				3F0BE59C1FF0A142007E2F5F /* QYHworldViewController.m */,
 			);
 			path = Controllerview;
 			sourceTree = "<group>";
@@ -577,6 +593,9 @@
 				3F5945551FF4F04200091435 /* QYHCustomTableViewCell.h */,
 				3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */,
 				3F5945571FF4F04200091435 /* QYHCustomTableViewCell.xib */,
+				3F3DFD8E2008A8FE002ADE06 /* QYHPictureview.h */,
+				3F3DFD8F2008A8FE002ADE06 /* QYHPictureview.m */,
+				3F3DFD912008A917002ADE06 /* QYHPictureview.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -868,6 +887,8 @@
 		3FDFE2161FDA64F30002A594 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3F3DFD952008AE16002ADE06 /* UIImageView+Download.h */,
+				3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */,
 				3F6167841FF4BC380071F7C1 /* UIImage+Antialias.h */,
 				3F6167811FF4BC370071F7C1 /* UIImage+Antialias.m */,
 				3F6167851FF4BC380071F7C1 /* UIImage+Image.h */,
@@ -1129,6 +1150,7 @@
 				3FD443F31FCD496C0058B3EF /* Assets.xcassets in Resources */,
 				3FECB7A21FE9142C006B66C6 /* QyhAlterView.xib in Resources */,
 				3FF1B8101FFCCDB400250885 /* LICENSE in Resources */,
+				3F3DFD922008A917002ADE06 /* QYHPictureview.xib in Resources */,
 				3F8884621FEE49B6007309FB /* CustomCollectionViewCell.xib in Resources */,
 				3F5945591FF4F04200091435 /* QYHCustomTableViewCell.xib in Resources */,
 				3FF1B81B1FFCCDB400250885 /* LICENSE in Resources */,
@@ -1150,6 +1172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3DFD962008AE16002ADE06 /* UIImageView+Download.m in Sources */,
 				3FCE8AD71FFE053D00ED4A6A /* SDWebImageDownloader.m in Sources */,
 				3FF1B81E1FFCCDB400250885 /* MJProperty.m in Sources */,
 				3FCE8AEE1FFE230400ED4A6A /* CustomDoneBtn.m in Sources */,
@@ -1186,6 +1209,7 @@
 				3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */,
 				3F61677F1FF4BBC50071F7C1 /* QYHfastLongin.m in Sources */,
 				3FF1B80C1FFCCDB400250885 /* AFSecurityPolicy.m in Sources */,
+				3F3DFD902008A8FE002ADE06 /* QYHPictureview.m in Sources */,
 				3F8884071FEE3893007309FB /* QYHTabbarViewController.m in Sources */,
 				3FD443F91FCD496C0058B3EF /* main.m in Sources */,
 				3FF1B8181FFCCDB400250885 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1280,7 +1304,8 @@
 		3FD443FA1FCD496C0058B3EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1336,7 +1361,8 @@
 		3FD443FB1FCD496C0058B3EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1386,6 +1412,8 @@
 		3FD443FD1FCD496C0058B3EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_STYLE = Manual;
@@ -1404,6 +1432,8 @@
 		3FD443FE1FCD496C0058B3EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_STYLE = Manual;

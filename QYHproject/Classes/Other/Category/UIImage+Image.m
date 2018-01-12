@@ -18,7 +18,7 @@
 
 }
 
-- (instancetype)xmg_circleImage
+- (instancetype)qyh_circleImage
 {
     // 1.开启图形上下文
     // 比例因素:当前点与像素比例
@@ -37,8 +37,8 @@
     return image;
 }
 
-+ (instancetype)xmg_circleImageNamed:(NSString *)name
++ (instancetype)qyh_circleImageNamed:(NSString *)name
 {
-    return [[self imageNamed:name] xmg_circleImage];
+    return [[self imageNamed:name] qyh_circleImage];
 }
 @end

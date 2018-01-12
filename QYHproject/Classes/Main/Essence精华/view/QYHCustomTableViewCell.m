@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "QYHCustomTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "QYHPictureview.h"
 @interface QYHCustomTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headIcon;
 @property (weak, nonatomic) IBOutlet UILabel *titleString;
@@ -17,10 +18,21 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiBut;
 @property (weak, nonatomic) IBOutlet UIButton *repostBut;
 @property (weak, nonatomic) IBOutlet UIButton *commentBut;
-
+@property (strong, nonatomic) QYHPictureview *pictureview;
 @end
 @implementation QYHCustomTableViewCell
-
+-(QYHPictureview *)pictureview
+{
+    
+    
+    
+    if (!_pictureview) {
+        QYHPictureview *pictureview = [QYHPictureview qyh_viewFromXib];
+        [self.contentView addSubview:pictureview];
+        _pictureview = pictureview;
+    }
+    return _pictureview;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.headIcon.layer.masksToBounds = YES;
@@ -41,6 +53,7 @@
     [self.headIcon sd_setImageWithURL:[NSURL URLWithString:_QYHModel.profile_image] placeholderImage:placeImage];
     
 }
+
 -(void)setQYHModel:(QYHModel *)QYHModel
 {
     _QYHModel = QYHModel;
@@ -54,6 +67,11 @@
     [self setupButton:self.repostBut number:QYHModel.repost placeholderText:@"分享"];
     [self setupButton:self.commentBut number:QYHModel.comment placeholderText:@"评论"];
     
+    if (_QYHModel.type == QYHTopicTypePicture) {
+        self.pictureview.hidden = NO;
+        self.pictureview.topic = _QYHModel;
+    }
+    
 }
 -(void)setupButton:(UIButton *)button number:(NSUInteger )number placeholderText:(NSString *)string
 {
@@ -65,10 +83,16 @@
         [button setTitle:string forState:UIControlStateNormal];
     }
 }
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }
-
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.pictureview.frame =  CGRectMake(0, 35, 320, 186.5);
+}
 @end

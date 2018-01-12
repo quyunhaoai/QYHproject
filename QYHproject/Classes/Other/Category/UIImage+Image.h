@@ -12,7 +12,7 @@
 
 + (instancetype)imageOriginalWithName:(NSString *)imageName;
 
-- (instancetype)xmg_circleImage;
+- (instancetype)qyh_circleImage;
 
-+ (instancetype)xmg_circleImageNamed:(NSString *)name;
++ (instancetype)qyh_circleImageNamed:(NSString *)name;
 @end

@@ -18,7 +18,7 @@
 @property CGFloat qyh_center_x;
 @property CGFloat qyh_center_y;
 
-
++ (instancetype)qyh_viewFromXib;
 
 
 @end

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QYHPictureview">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-u3-xMZ">
+                    <rect key="frame" x="0.0" y="30" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AcH-I1-lmw"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-ly-dyU">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="2cx-Pc-lCp"/>
+                        <constraint firstAttribute="height" constant="31" id="AEH-6n-mUy"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g9n-y8-cFQ">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-OZ-Jiu">
+                    <rect key="frame" x="0.0" y="179" width="343" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="Xvb-79-AYH"/>
+                    </constraints>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ork-OZ-Jiu" secondAttribute="bottom" id="3bH-YO-Q6m"/>
+                <constraint firstItem="KM9-ly-dyU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DM7-Mu-eS9"/>
+                <constraint firstItem="KM9-ly-dyU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JpI-za-Oc2"/>
+                <constraint firstAttribute="trailing" secondItem="g9n-y8-cFQ" secondAttribute="trailing" id="NV0-hw-VrV"/>
+                <constraint firstItem="m2e-u3-xMZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="OKc-lQ-Bzf"/>
+                <constraint firstAttribute="trailing" secondItem="Ork-OZ-Jiu" secondAttribute="trailing" id="Pdd-LJ-gIL"/>
+                <constraint firstItem="g9n-y8-cFQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VBt-r7-lE6"/>
+                <constraint firstAttribute="trailing" secondItem="m2e-u3-xMZ" secondAttribute="trailing" id="a6q-yb-kPf"/>
+                <constraint firstItem="g9n-y8-cFQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b8h-fL-CEt"/>
+                <constraint firstItem="Ork-OZ-Jiu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gbY-4C-mD8"/>
+                <constraint firstAttribute="bottom" secondItem="g9n-y8-cFQ" secondAttribute="bottom" id="kF0-vb-kff"/>
+                <constraint firstItem="m2e-u3-xMZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uTS-eZ-Ixv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gifview" destination="KM9-ly-dyU" id="bK5-Jb-YUY"/>
+                <outlet property="imageView" destination="g9n-y8-cFQ" id="J5B-x0-dFY"/>
+                <outlet property="placeholderview" destination="m2e-u3-xMZ" id="oTs-Vu-gRe"/>
+                <outlet property="seeBigPictureButton" destination="Ork-OZ-Jiu" id="DQz-58-Zpm"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="-173.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>
