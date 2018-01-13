@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface QYHpicerViewController : UITableViewController
+#import "QYHBassViewController.h"
+#import "QYHseeBigPictureViewController.h"
+@interface QYHpicerViewController : QYHBassViewController
 
 @end

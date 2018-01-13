@@ -71,6 +71,9 @@
         self.pictureview.hidden = NO;
         self.pictureview.topic = _QYHModel;
     }
+    if (_QYHModel.type == QYHTopicTypeWord) {
+        self.pictureview.hidden = YES;
+    }
     
 }
 -(void)setupButton:(UIButton *)button number:(NSUInteger )number placeholderText:(NSString *)string
@@ -93,6 +96,7 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    self.pictureview.frame =  CGRectMake(0, 35, 320, 186.5);
+    
+    self.pictureview.frame =  self.QYHModel.middleViewFrame;
 }
 @end

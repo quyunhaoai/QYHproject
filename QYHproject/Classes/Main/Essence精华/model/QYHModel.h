@@ -53,5 +53,11 @@ typedef NS_ENUM(NSUInteger, QYHTopicType) {
 /** 是否为超长图片 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 /** 是否为超长图片 */
-@property (nonatomic, assign, getter=isBigPicture) BOOL is_gif;
+@property (nonatomic, assign, getter=is_gif) BOOL is_gif;
+
+/** cellFrame **/
+@property (nonatomic,assign) CGFloat cellHeight;
+/**中间view的尺寸**/
+@property (nonatomic,assign) CGRect middleViewFrame;
+
 @end

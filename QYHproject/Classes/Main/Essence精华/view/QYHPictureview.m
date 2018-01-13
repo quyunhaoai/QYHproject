@@ -9,6 +9,7 @@
 #import "QYHPictureview.h"
 #import "UIImageView+WebCache.h"
 #import "UIImageView+Download.h"
+#import "QYHseeBigPictureViewController.h"
 @interface QYHPictureview()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderview;
@@ -29,11 +30,14 @@
 {
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
-    
+    self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigpicture)]];
 }
 -(void)seeBigpicture{
     NSLog(@"%s",__FUNCTION__);
+    QYHseeBigPictureViewController *seeVc = [[QYHseeBigPictureViewController alloc] init];
+    seeVc.topic = self.topic;
+    [self.window.rootViewController presentViewController:seeVc animated:YES completion:nil];
 }
 -(void)setTopic:(QYHModel *)topic
 {
@@ -48,7 +52,8 @@
         }
         
     }];
-    self.gifview.hidden = !topic.is_gif;
+//    self.gifview.hidden = !topic.is_gif;
+    self.gifview.hidden = YES;
     
 }
 @end

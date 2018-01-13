@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface QYHmuiceViewController : UITableViewController
+#import "QYHBassViewController.h"
+@interface QYHmuiceViewController : QYHBassViewController
 
 @end

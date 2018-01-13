@@ -15,6 +15,8 @@
 		3F3DFD902008A8FE002ADE06 /* QYHPictureview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DFD8F2008A8FE002ADE06 /* QYHPictureview.m */; };
 		3F3DFD922008A917002ADE06 /* QYHPictureview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3DFD912008A917002ADE06 /* QYHPictureview.xib */; };
 		3F3DFD962008AE16002ADE06 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */; };
+		3F403AD32009D5DC006847D2 /* QYHseeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */; };
+		3F403AD42009D5DC006847D2 /* QYHseeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
 		3F5945541FF4EF1D00091435 /* QYHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945531FF4EF1D00091435 /* QYHModel.m */; };
 		3F5945581FF4F04200091435 /* QYHCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */; };
@@ -137,6 +139,7 @@
 		3FF1B82F1FFCD40C00250885 /* QYHBiaoqianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1B82E1FFCD40C00250885 /* QYHBiaoqianViewController.m */; };
 		3FF1B8371FFCD4ED00250885 /* QYHTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1B8351FFCD4ED00250885 /* QYHTagTableViewCell.m */; };
 		3FF1B8381FFCD4ED00250885 /* QYHTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF1B8361FFCD4ED00250885 /* QYHTagTableViewCell.xib */; };
+		3FF5B48B2009C8BE00726B35 /* QYHBassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5B48A2009C8BE00726B35 /* QYHBassViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +158,9 @@
 		3F3DFD912008A917002ADE06 /* QYHPictureview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHPictureview.xib; sourceTree = "<group>"; };
 		3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Download.m"; path = "../../../../../../../../../../Downloads/归档 2/代码/01-BuDeJie-精华的其他模块/BuDeJie/Classes/Other/Category/UIImageView+Download.m"; sourceTree = "<group>"; };
 		3F3DFD952008AE16002ADE06 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Download.h"; path = "../../../../../../../../../../Downloads/归档 2/代码/01-BuDeJie-精华的其他模块/BuDeJie/Classes/Other/Category/UIImageView+Download.h"; sourceTree = "<group>"; };
+		3F403AD02009D5DC006847D2 /* QYHseeBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHseeBigPictureViewController.h; sourceTree = "<group>"; };
+		3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHseeBigPictureViewController.m; sourceTree = "<group>"; };
+		3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHseeBigPictureViewController.xib; sourceTree = "<group>"; };
 		3F43D7861FD125C3008639DF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		3F43D7871FD125C4008639DF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		3F5945521FF4EF1D00091435 /* QYHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHModel.h; sourceTree = "<group>"; };
@@ -383,6 +389,8 @@
 		3FF1B8341FFCD4ED00250885 /* QYHTagTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHTagTableViewCell.h; sourceTree = "<group>"; };
 		3FF1B8351FFCD4ED00250885 /* QYHTagTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHTagTableViewCell.m; sourceTree = "<group>"; };
 		3FF1B8361FFCD4ED00250885 /* QYHTagTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHTagTableViewCell.xib; sourceTree = "<group>"; };
+		3FF5B4892009C8BD00726B35 /* QYHBassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHBassViewController.h; sourceTree = "<group>"; };
+		3FF5B48A2009C8BE00726B35 /* QYHBassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHBassViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +409,8 @@
 		3F3DFD932008AD10002ADE06 /* topVC */ = {
 			isa = PBXGroup;
 			children = (
+				3FF5B4892009C8BD00726B35 /* QYHBassViewController.h */,
+				3FF5B48A2009C8BE00726B35 /* QYHBassViewController.m */,
 				3F0BE59E1FF0A143007E2F5F /* QYHallViewController.h */,
 				3F0BE5981FF0A141007E2F5F /* QYHallViewController.m */,
 				3F0BE59F1FF0A143007E2F5F /* QYHmuiceViewController.h */,
@@ -574,6 +584,9 @@
 				3F3DFD932008AD10002ADE06 /* topVC */,
 				3F8884431FEE4814007309FB /* QYHOneViewController.h */,
 				3F8884441FEE4814007309FB /* QYHOneViewController.m */,
+				3F403AD02009D5DC006847D2 /* QYHseeBigPictureViewController.h */,
+				3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */,
+				3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */,
 			);
 			path = Controllerview;
 			sourceTree = "<group>";
@@ -1138,6 +1151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F403AD42009D5DC006847D2 /* QYHseeBigPictureViewController.xib in Resources */,
 				3F8884641FEE49B6007309FB /* MeTableViewController.storyboard in Resources */,
 				3FF1B82A1FFCCDB400250885 /* SVProgressHUD.bundle in Resources */,
 				3FBBFD9E1FFF48F600D431E1 /* MJRefresh.bundle in Resources */,
@@ -1192,6 +1206,7 @@
 				3FCE8AE01FFE053D00ED4A6A /* UIView+WebCacheOperation.m in Sources */,
 				3FCE8ADE1FFE053D00ED4A6A /* UIImageView+HighlightedWebCache.m in Sources */,
 				3FCE8ADA1FFE053D00ED4A6A /* SDWebImagePrefetcher.m in Sources */,
+				3F403AD32009D5DC006847D2 /* QYHseeBigPictureViewController.m in Sources */,
 				3FF1B8141FFCCDB400250885 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3FF1B82F1FFCD40C00250885 /* QYHBiaoqianViewController.m in Sources */,
 				3F61676F1FF496060071F7C1 /* UIBarButtonItem+Item.m in Sources */,
@@ -1244,6 +1259,7 @@
 				3FBBFDA21FFF48F600D431E1 /* UIScrollView+MJRefresh.m in Sources */,
 				3F8884631FEE49B6007309FB /* MeTableViewController.m in Sources */,
 				3F0BE5A31FF0A144007E2F5F /* QYHworldViewController.m in Sources */,
+				3FF5B48B2009C8BE00726B35 /* QYHBassViewController.m in Sources */,
 				3F8884061FEE3893007309FB /* QYHBaseNavigationViewController.m in Sources */,
 				3FF1B8161FFCCDB400250885 /* UIButton+AFNetworking.m in Sources */,
 				3FCE8AD31FFE053D00ED4A6A /* NSData+ImageContentType.m in Sources */,

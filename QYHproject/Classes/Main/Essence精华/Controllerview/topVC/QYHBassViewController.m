@@ -1,20 +1,20 @@
 //
-//  QYHallViewController.m
+//  QYHBassViewController.m
 //  NewProject
 //
 //  Created by hao on 2017/12/1.
-//  Copyright © 2017年 hao. All rights reserved.
+//  Copyright © 2017年 hao. Bass rights reserved.
 //
 
-#import "QYHModel.h"
-#import "QYHallViewController.h"
+
+#import "QYHBassViewController.h"
 #import "QYHCustomTableViewCell.h"
 #import "MJRefresh.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
 
-@interface QYHallViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface QYHBassViewController ()<UITableViewDelegate,UITableViewDataSource>
 //@property (nonatomic, strong) UITableView *tableview;
 /*网络请求*/
 @property (nonatomic,strong) AFHTTPSessionManager *mgr;
@@ -22,7 +22,7 @@
 -(QYHTopicType)type;
 @end
 static NSString *const cellIdentifier = @"qyhcellID";
-@implementation QYHallViewController
+@implementation QYHBassViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,7 +52,7 @@ static NSString *const cellIdentifier = @"qyhcellID";
 #pragma mark - 数据处理
 - (QYHTopicType)type
 {
-    return QYHTopicTypeAll;
+    return QYHTopicTypePicture;
 }
 -(void)requestUpData
 {
@@ -107,33 +107,13 @@ static NSString *const cellIdentifier = @"qyhcellID";
         [self.tableView.mj_header endRefreshing];
     }];
 }
-      /**
--(NSMutableArray *)tableData
-{
-    if (_tableData == nil) {
-        _tableData = [NSMutableArray array];
-  
-        for (int i = 0; i < 20; i ++) {
-            [_tableData addObject:[NSString stringWithFormat:@"%d",i]];
-        }
-
-    }
-    return _tableData;
-}
-               **/
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"tableview%@",NSStringFromCGRect(self.tableView.frame));
-//    CGFloat y = 0;
-//    self.view.qyh_y = y;
-//    self.tableView.qyh_y = y;
 }
 -(void)viewDidLayoutSubviews
 {
-//    CGFloat y = 0;
-//    self.view.qyh_y = y;
-//    self.tableView.qyh_y = y;
+
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -141,19 +121,6 @@ static NSString *const cellIdentifier = @"qyhcellID";
     [SVProgressHUD dismiss];
     [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-}
--(void)setupTableView
-{
-    
-    UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//    table.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:table];
-    table.delegate = self;
-    table.dataSource = self;
-    
-    table.contentInset = UIEdgeInsetsMake(TitleBarHeight, 0, TabBarHeight, 0);
-    
-//    self.tableview = table;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

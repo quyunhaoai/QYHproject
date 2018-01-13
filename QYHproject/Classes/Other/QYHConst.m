@@ -18,7 +18,7 @@ CGFloat const QYHNavMaxY = 64;
 CGFloat const QYHTitlesViewH = 35;
 
 /** 全局统一的间距 */
-CGFloat const QYHMarin = 10;
+CGFloat const QYHMarin = 5;
 
 /** 统一的一个请求路径 */
 NSString  * const QYHCommonURL = @"http://api.budejie.com/api/api_open.php";
