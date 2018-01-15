@@ -15,12 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-u3-xMZ">
-                    <rect key="frame" x="0.0" y="30" width="343" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="AcH-I1-lmw"/>
-                    </constraints>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-ly-dyU">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                     <constraints>
@@ -31,12 +25,21 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g9n-y8-cFQ">
                     <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-u3-xMZ">
+                    <rect key="frame" x="0.0" y="30" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AcH-I1-lmw"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-OZ-Jiu">
                     <rect key="frame" x="0.0" y="179" width="343" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="Xvb-79-AYH"/>
                     </constraints>
                     <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                    <connections>
+                        <action selector="SeeBigPciture:" destination="iN0-l3-epB" eventType="touchUpInside" id="XdI-pd-HJO"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,6 +8,7 @@
 
 #import "QYHTwoViewController.h"
 #import "QYHLongInViewController.h"
+#import "QYH.h"
 @interface QYHTwoViewController ()
 
 @end
@@ -31,7 +32,7 @@
     [self presentViewController:longInVc animated:YES completion:nil];
 }
 -(void)friends{
-    
+    [self.view makeToast:@"开发中" duration:3 position:@"center"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

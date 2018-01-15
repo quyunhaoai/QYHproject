@@ -54,13 +54,16 @@
                         <constraint firstItem="Wqe-Jy-vYe" firstAttribute="leading" secondItem="7zc-c7-xvM" secondAttribute="leading" id="xOC-rA-D6b"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-mG-lgO">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-mG-lgO">
                     <rect key="frame" x="54.5" y="142" width="266" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="0dU-rt-ANj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="登录" backgroundImage="loginBtnBg"/>
+                    <connections>
+                        <action selector="loginAndRegister:" destination="Iz2-ab-WtT" eventType="touchUpInside" id="H6N-xp-nz8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-bF-Cue">
                     <rect key="frame" x="203.5" y="192" width="117" height="30"/>
@@ -90,7 +93,7 @@
                 <outlet property="myLoginButton" destination="Y7l-mG-lgO" id="vMN-DL-c2w"/>
                 <outlet property="myRegister" destination="sxf-bm-xas" id="9tQ-y7-i8V"/>
             </connections>
-            <point key="canvasLocation" x="-315.5" y="-485"/>
+            <point key="canvasLocation" x="-601" y="-594"/>
         </view>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QYHCustomLonginview">
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
@@ -134,13 +137,16 @@
                         <constraint firstAttribute="trailing" secondItem="2Va-59-TUc" secondAttribute="trailing" id="ppt-NL-oV6"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-bm-xas">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxf-bm-xas">
                     <rect key="frame" x="54.5" y="142" width="266" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="20u-Wv-1Rc"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="注册" backgroundImage="loginBtnBg"/>
+                    <connections>
+                        <action selector="loginAndRegister:" destination="Iz2-ab-WtT" eventType="touchUpInside" id="rjB-ZL-Pfk"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -152,7 +158,7 @@
                 <constraint firstItem="sxf-bm-xas" firstAttribute="trailing" secondItem="4Eu-qL-qgz" secondAttribute="trailing" id="tKf-ab-sAM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-308" y="-90"/>
+            <point key="canvasLocation" x="-602" y="-167"/>
         </view>
     </objects>
     <resources>

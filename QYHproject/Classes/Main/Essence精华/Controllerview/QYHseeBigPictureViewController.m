@@ -28,14 +28,19 @@
 //    scrollview.autoresizesSubviews = NO;
     [self.view insertSubview:scrollview atIndex:0];
     self.scrollview = scrollview;
-    
+//    if (_topic.is_gif) return;
     UIImageView *imageview = [[UIImageView alloc] init];
     [imageview sd_setImageWithURL:[NSURL URLWithString: _topic.image1 ] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (!image) return ;
+        
     }];
 //    imageview.contentMode = UIViewContentModeCenter;
     imageview.qyh_width = _scrollview.qyh_width;
-    imageview.qyh_height = imageview.qyh_width * _topic.height/_topic.width;
+    if (_topic) {
+        imageview.qyh_height = imageview.qyh_width * _topic.height/_topic.width;
+    }else{
+        imageview.qyh_height =200;
+    }
     imageview.qyh_x = 0;
     if (imageview.qyh_height > kScreenH) {
         imageview.qyh_y = 0;

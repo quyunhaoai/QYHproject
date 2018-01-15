@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIImageView+Download.h"
 #import "QYHseeBigPictureViewController.h"
+#import "QYH.h"
 @interface QYHPictureview()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderview;
@@ -48,12 +49,35 @@
         if (!image) return ;
         self.placeholderview.hidden = YES;
         if (_topic.isBigPicture) {
+            /*
+            CGFloat imageW = topic.middleViewFrame.size.width;
+//            CGFloat imageH = imageW * topic.height / topic.width;
+            CGFloat imageH = 200;
             
+            // 开启上下文
+            UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
+            // 绘制图片到上下文中
+            [self.imageView.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
+            self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+            // 关闭上下文
+            UIGraphicsEndImageContext();
+             */
+            self.imageView.image = [QYHTools ct_imageFromImage:image inRect:CGRectMake(0, 0, topic.middleViewFrame.size.width, 200)];
+        }else{
+//            self.seeBigPictureButton.hidden = YES;
         }
         
     }];
+    
 //    self.gifview.hidden = !topic.is_gif;
     self.gifview.hidden = YES;
     
 }
+- (IBAction)SeeBigPciture:(id)sender {
+    
+    QYHseeBigPictureViewController *seeVc = [[QYHseeBigPictureViewController alloc] init];
+    seeVc.topic = self.topic;
+    [self.window.rootViewController presentViewController:seeVc animated:YES completion:nil];
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "QYHCustomLonginview.h"
+#import "QYH.h"
 @interface QYHCustomLonginview()
 @property (weak, nonatomic) IBOutlet UIButton *myLoginButton;
 @property (weak, nonatomic) IBOutlet UIButton *myRegister;
@@ -31,6 +32,14 @@
 +(instancetype)fastRegisterView
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+}
+- (IBAction)loginAndRegister:(UIButton *)sender {
+    if (sender.tag == 1) {
+        [self makeToast:@"登陆成功，功能开发中" duration:3 position:@"bottom"];
+    }else{
+          [self makeToast:@"注册成功，功能开发中" duration:3 position:nil];
+    }
+    
 }
 
 @end

@@ -60,5 +60,13 @@
  *  @param directoryPath 文件夹路径
  */
 + (void)removeDirectoryPath:(NSString *)directoryPath;
-
+/**
+ *  从图片中按指定的位置大小截取图片的一部分
+ *
+ *  @param image UIImage image 原始的图片
+ *  @param rect  CGRect rect 要截取的区域
+ *
+ *  @return UIImage
+ */
++ (UIImage *)ct_imageFromImage:(UIImage *)image inRect:(CGRect)rect;
 @end

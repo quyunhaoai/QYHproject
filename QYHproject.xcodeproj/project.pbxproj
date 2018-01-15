@@ -34,6 +34,9 @@
 		3F6167881FF4BC380071F7C1 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6167831FF4BC370071F7C1 /* UITextField+Placeholder.m */; };
 		3F61678C1FF4BC4F0071F7C1 /* QYHLongInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6167891FF4BC4E0071F7C1 /* QYHLongInViewController.xib */; };
 		3F61678D1FF4BC4F0071F7C1 /* QYHLongInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F61678A1FF4BC4E0071F7C1 /* QYHLongInViewController.m */; };
+		3F6ECB06200C974F00EB7ED8 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6ECB03200C974F00EB7ED8 /* MBProgressHUD+Add.m */; };
+		3F6ECB07200C974F00EB7ED8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6ECB05200C974F00EB7ED8 /* MBProgressHUD.m */; };
+		3F6ECB0B200C98EF00EB7ED8 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6ECB0A200C98EF00EB7ED8 /* UIView+Toast.m */; };
 		3F8884061FEE3893007309FB /* QYHBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883EF1FEE3892007309FB /* QYHBaseNavigationViewController.m */; };
 		3F8884071FEE3893007309FB /* QYHTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883F11FEE3892007309FB /* QYHTabbarViewController.m */; };
 		3F8884081FEE3893007309FB /* QYHbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8883F51FEE3892007309FB /* QYHbutton.m */; };
@@ -190,6 +193,12 @@
 		3F6167891FF4BC4E0071F7C1 /* QYHLongInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYHLongInViewController.xib; sourceTree = "<group>"; };
 		3F61678A1FF4BC4E0071F7C1 /* QYHLongInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHLongInViewController.m; sourceTree = "<group>"; };
 		3F61678B1FF4BC4F0071F7C1 /* QYHLongInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHLongInViewController.h; sourceTree = "<group>"; };
+		3F6ECB02200C974F00EB7ED8 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		3F6ECB03200C974F00EB7ED8 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		3F6ECB04200C974F00EB7ED8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3F6ECB05200C974F00EB7ED8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		3F6ECB09200C98EF00EB7ED8 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		3F6ECB0A200C98EF00EB7ED8 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		3F8883D01FEE3091007309FB /* QYHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHTools.h; sourceTree = "<group>"; };
 		3F8883EE1FEE3892007309FB /* QYHBaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHBaseNavigationViewController.h; sourceTree = "<group>"; };
 		3F8883EF1FEE3892007309FB /* QYHBaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHBaseNavigationViewController.m; sourceTree = "<group>"; };
@@ -438,6 +447,26 @@
 				3FD443EF1FCD496C0058B3EF /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		3F6ECB01200C974F00EB7ED8 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3F6ECB02200C974F00EB7ED8 /* MBProgressHUD+Add.h */,
+				3F6ECB03200C974F00EB7ED8 /* MBProgressHUD+Add.m */,
+				3F6ECB04200C974F00EB7ED8 /* MBProgressHUD.h */,
+				3F6ECB05200C974F00EB7ED8 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		3F6ECB08200C98EF00EB7ED8 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				3F6ECB09200C98EF00EB7ED8 /* UIView+Toast.h */,
+				3F6ECB0A200C98EF00EB7ED8 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		3F8883D31FEE30B3007309FB /* Tools */ = {
@@ -950,6 +979,8 @@
 		3FECB7991FE913DF006B66C6 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				3F6ECB08200C98EF00EB7ED8 /* Toast */,
+				3F6ECB01200C974F00EB7ED8 /* MBProgressHUD */,
 				3FBBFD611FFF48F600D431E1 /* MJRefresh */,
 				3FCE8AB01FFE053D00ED4A6A /* SDWebImage */,
 				3FF1B7C01FFCCDB400250885 /* AFNetworking */,
@@ -1200,6 +1231,7 @@
 				3FBBFD991FFF48F600D431E1 /* MJRefreshBackNormalFooter.m in Sources */,
 				3FF1B8201FFCCDB400250885 /* MJPropertyType.m in Sources */,
 				3FF1B80A1FFCCDB400250885 /* AFHTTPSessionManager.m in Sources */,
+				3F6ECB0B200C98EF00EB7ED8 /* UIView+Toast.m in Sources */,
 				3FBBFDA31FFF48F600D431E1 /* UIView+MJExtension.m in Sources */,
 				3FCE8ADD1FFE053D00ED4A6A /* UIImage+MultiFormat.m in Sources */,
 				3FF1B8251FFCCDB400250885 /* NSString+MJExtension.m in Sources */,
@@ -1253,6 +1285,7 @@
 				3FCE8AD81FFE053D00ED4A6A /* SDWebImageDownloaderOperation.m in Sources */,
 				3FE37EBB1FFC80CD006BAE12 /* QYHTools.m in Sources */,
 				3FCE8AD61FFE053D00ED4A6A /* SDWebImageDecoder.m in Sources */,
+				3F6ECB07200C974F00EB7ED8 /* MBProgressHUD.m in Sources */,
 				3FF1B8131FFCCDB400250885 /* AFImageDownloader.m in Sources */,
 				3FCE8AE81FFE1E0100ED4A6A /* CustomerViewController.m in Sources */,
 				3F5945541FF4EF1D00091435 /* QYHModel.m in Sources */,
@@ -1264,6 +1297,7 @@
 				3FF1B8161FFCCDB400250885 /* UIButton+AFNetworking.m in Sources */,
 				3FCE8AD31FFE053D00ED4A6A /* NSData+ImageContentType.m in Sources */,
 				3FCE8ADC1FFE053D00ED4A6A /* UIImage+GIF.m in Sources */,
+				3F6ECB06200C974F00EB7ED8 /* MBProgressHUD+Add.m in Sources */,
 				3FBBFD9B1FFF48F600D431E1 /* MJRefreshGifHeader.m in Sources */,
 				3FBBFD911FFF48F600D431E1 /* MJRefreshBackFooter.m in Sources */,
 				3F61677E1FF4BBC50071F7C1 /* QYHCustomTextField.m in Sources */,
