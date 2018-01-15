@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QYHseeBigPictureViewController">
             <connections>
+                <outlet property="saveBut" destination="MYv-4K-FAB" id="Bhk-Oc-5sW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,12 +31,27 @@
                         <action selector="returnBackView:" destination="-1" eventType="touchUpInside" id="kWc-Cr-vP0"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYv-4K-FAB">
+                    <rect key="frame" x="295" y="597" width="70" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="1ql-bY-ahO"/>
+                        <constraint firstAttribute="height" constant="30" id="pcm-1v-0pI"/>
+                    </constraints>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="saveClick:" destination="-1" eventType="touchUpInside" id="Ijc-Pj-PSU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="KTu-Ty-hHt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="2z5-H6-0op"/>
+                <constraint firstAttribute="trailing" secondItem="MYv-4K-FAB" secondAttribute="trailing" constant="10" id="A4x-ta-RsK"/>
+                <constraint firstAttribute="bottom" secondItem="MYv-4K-FAB" secondAttribute="bottom" constant="40" id="cUf-LT-HfT"/>
                 <constraint firstItem="KTu-Ty-hHt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="rxT-uC-4Ey"/>
             </constraints>
+            <point key="canvasLocation" x="36" y="59"/>
         </view>
     </objects>
     <resources>

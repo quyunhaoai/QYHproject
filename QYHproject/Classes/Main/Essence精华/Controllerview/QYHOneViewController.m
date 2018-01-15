@@ -21,6 +21,7 @@ CGFloat  const marin=10;
 @property (nonatomic, weak) UIButton *currelButton;
 @property (nonatomic, strong) UIView *titleView;
 @property (nonatomic, weak) UIView *underline;
+-(void)setupTitleView:(BOOL)isShow;
 @end
 
 @implementation QYHOneViewController
@@ -29,6 +30,7 @@ CGFloat  const marin=10;
     [super viewWillAppear:animated];
     NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
     NSLog(@"scrollview:%@",NSStringFromCGRect(self.myScrollView.bounds));
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,6 +44,24 @@ CGFloat  const marin=10;
 
     //添加第0个控制器View
     [self addVCtoScrollView:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupFrame) name:@"setupFrame" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupFrameCancel) name:@"setupFrameCancel" object:nil];
+}
+-(void)setupTitleView:(BOOL)isShow{
+    if (isShow) {
+        self.titleView.qyh_y = 20;
+    }else{
+        self.titleView.qyh_y = 64;
+    }
+}
+-(void)setupFrame
+{
+    self.titleView.qyh_y = 20;
+}
+-(void)setupFrameCancel
+{
+    self.titleView.qyh_y = 64;
 }
 -(void)addVCtoScrollView:(NSUInteger )integer
 {

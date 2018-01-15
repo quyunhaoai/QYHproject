@@ -41,6 +41,8 @@ static NSString *const cellIdentifier = @"qyhcellID";
     }];
     [self.tableView.mj_header beginRefreshing];
     [SVProgressHUD showWithStatus:@"正在加载中..."];
+    
+//    self.navigationController.hidesBarsOnSwipe = YES;
 }
 -(AFHTTPSessionManager *)mgr
 {
@@ -91,7 +93,7 @@ static NSString *const cellIdentifier = @"qyhcellID";
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
     [self.mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
+        NSLog(@"--%@--",responseObject);
         self.tableData = [QYHModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [self.tableView reloadData];
@@ -136,6 +138,22 @@ static NSString *const cellIdentifier = @"qyhcellID";
     cell.QYHModel = self.tableData[indexPath.row];
     return cell;
 }
-
+#pragma mark scrollviewDelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    NSLog(@"%f",scrollView.contentOffset.y);
+//    CGFloat lastcontentOffsetY = -99;
+//    if (scrollView.contentOffset.y -lastcontentOffsetY > NavBarHeight) {
+////        self.navigationController.navigationBar.hidden = YES;
+//        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//        [[NSNotificationCenter defaultCenter]postNotificationName:@"setupFrame" object:nil];
+//        
+//    }else{
+////        self.navigationController.navigationBar.hidden = NO;
+//        [self.navigationController setNavigationBarHidden:NO animated:YES];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"setupFrameCancel" object:nil];
+//    }
+//    
+}
 
 @end

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QYHOneViewController : UIViewController
+@protocol QYHOneViewControllerDelegate <NSObject>
+@optional
+-(void)oneView:(UIViewController *)oneView setupTitleViewFarme:(CGRect)farme;
 
+@end
+
+@interface QYHOneViewController : UIViewController
+-(void)setupTitleView:(BOOL)isShow;
 
 @end
 

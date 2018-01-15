@@ -14,7 +14,7 @@
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
 
-@interface QYHallViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface QYHallViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 //@property (nonatomic, strong) UITableView *tableview;
 /*网络请求*/
 @property (nonatomic,strong) AFHTTPSessionManager *mgr;
@@ -41,6 +41,8 @@ static NSString *const cellIdentifier = @"qyhcellID";
     }];
     [self.tableView.mj_header beginRefreshing];
     [SVProgressHUD showWithStatus:@"正在加载中..."];
+    
+    self.navigationController.hidesBarsOnSwipe = YES;
 }
 -(AFHTTPSessionManager *)mgr
 {
@@ -169,6 +171,41 @@ static NSString *const cellIdentifier = @"qyhcellID";
     cell.QYHModel = self.tableData[indexPath.row];
     return cell;
 }
+#pragma mark scrollviewDelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    /*
+        //scrollView已经有拖拽手势，直接拿到scrollView的拖拽手势
+        UIPanGestureRecognizer *pan = scrollView.panGestureRecognizer;
+        //获取到拖拽的速度 >0 向下拖动 <0 向上拖动
+        CGFloat velocity = [pan velocityInView:scrollView].y;
+        if (velocity <- 5) {
+            //向上拖动，隐藏导航栏
+            [self.navigationController setNavigationBarHidden:YES animated:YES];
 
+        }else if (velocity > 5) {
+            //向下拖动，显示导航栏
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
+        }else if(velocity == 0){
+            //停止拖拽
+        }
 
+    CGFloat lastcontentOffsetY = -99;
+    if (scrollView.contentOffset.y -lastcontentOffsetY > NavBarHeight) {
+        //        self.navigationController.navigationBar.hidden = YES;
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"setupFrame" object:nil];
+        
+    }else{
+        
+        //        self.navigationController.navigationBar.hidden = NO;
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"setupFrameCancel" object:nil];
+    }
+     */
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    
+}
 @end

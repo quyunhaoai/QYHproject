@@ -84,7 +84,8 @@ static NSString *const cellID = @"cellID";
 -(void)setNavBar
 {
     self.title = @"推荐标签";
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
+
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back)];
 }
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];

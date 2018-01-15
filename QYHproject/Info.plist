@@ -2,15 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>我的项目</string>
+	<string>QYHproject</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,6 +22,27 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>允许之后可正常访问蓝牙</string>
+	<key>NSCameraUsageDescription</key>
+	<string>允许之后可使用相机功能</string>
+	<key>NSContactsUsageDescription</key>
+	<string>允许之后可正常使用通讯录功能</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>允许之后可正常使用定位功能</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>请允许使用定位</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>允许之后可正常使用麦克风功能</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>允许之后可保存图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>允许之后可正常使用相册相关功能</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

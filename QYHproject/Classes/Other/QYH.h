@@ -15,7 +15,7 @@
 #import "QYHTools.h"
 #import "UIImage+Image.h"
 #import "QyhAlterView.h"
-
+#import "SVProgressHUD.h"
 
 #import "QYHOneViewController.h"
 #import "QYHTwoViewController.h"

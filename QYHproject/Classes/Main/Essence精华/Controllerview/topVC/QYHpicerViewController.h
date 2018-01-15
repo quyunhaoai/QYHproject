@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "QYHBassViewController.h"
-#import "QYHseeBigPictureViewController.h"
+
 @interface QYHpicerViewController : QYHBassViewController
 
 @end

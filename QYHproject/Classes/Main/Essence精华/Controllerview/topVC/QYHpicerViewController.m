@@ -5,7 +5,7 @@
 //  Created by hao on 2017/12/1.
 //  Copyright © 2017年 hao. All rights reserved.
 //
-#import "QYH.h"
+
 #import "QYHpicerViewController.h"
 
 @interface QYHpicerViewController ()
