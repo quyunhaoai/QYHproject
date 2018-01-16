@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//@class QYHModel;
 #import "QYHModel.h"
 @interface QYHPictureview : UIView
 

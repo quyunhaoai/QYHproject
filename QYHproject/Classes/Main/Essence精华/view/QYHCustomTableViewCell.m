@@ -23,9 +23,6 @@
 @implementation QYHCustomTableViewCell
 -(QYHPictureview *)pictureview
 {
-    
-    
-    
     if (!_pictureview) {
         QYHPictureview *pictureview = [QYHPictureview qyh_viewFromXib];
         [self.contentView addSubview:pictureview];

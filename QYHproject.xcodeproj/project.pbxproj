@@ -14,7 +14,6 @@
 		3F0BE5A41FF0A144007E2F5F /* QYHpicerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0BE59D1FF0A143007E2F5F /* QYHpicerViewController.m */; };
 		3F3DFD902008A8FE002ADE06 /* QYHPictureview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DFD8F2008A8FE002ADE06 /* QYHPictureview.m */; };
 		3F3DFD922008A917002ADE06 /* QYHPictureview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3DFD912008A917002ADE06 /* QYHPictureview.xib */; };
-		3F3DFD962008AE16002ADE06 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */; };
 		3F403AD32009D5DC006847D2 /* QYHseeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */; };
 		3F403AD42009D5DC006847D2 /* QYHseeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
@@ -99,6 +98,7 @@
 		3FD443F61FCD496C0058B3EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD443F41FCD496C0058B3EF /* LaunchScreen.storyboard */; };
 		3FD443F91FCD496C0058B3EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD443F81FCD496C0058B3EF /* main.m */; };
 		3FE072B01FF24A9E002A8813 /* QYHFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */; };
+		3FE33879200DA6B600A7F03A /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE33877200DA6B600A7F03A /* UIImageView+Download.m */; };
 		3FE37EBB1FFC80CD006BAE12 /* QYHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE37EBA1FFC80CD006BAE12 /* QYHTools.m */; };
 		3FECB79D1FE91422006B66C6 /* JKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECB79B1FE91422006B66C6 /* JKCountDownButton.m */; };
 		3FECB7A11FE9142C006B66C6 /* QyhAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECB79F1FE9142B006B66C6 /* QyhAlterView.m */; };
@@ -159,8 +159,6 @@
 		3F3DFD8E2008A8FE002ADE06 /* QYHPictureview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHPictureview.h; sourceTree = "<group>"; };
 		3F3DFD8F2008A8FE002ADE06 /* QYHPictureview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHPictureview.m; sourceTree = "<group>"; };
 		3F3DFD912008A917002ADE06 /* QYHPictureview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHPictureview.xib; sourceTree = "<group>"; };
-		3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Download.m"; path = "../../../../../../../../../../Downloads/归档 2/代码/01-BuDeJie-精华的其他模块/BuDeJie/Classes/Other/Category/UIImageView+Download.m"; sourceTree = "<group>"; };
-		3F3DFD952008AE16002ADE06 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Download.h"; path = "../../../../../../../../../../Downloads/归档 2/代码/01-BuDeJie-精华的其他模块/BuDeJie/Classes/Other/Category/UIImageView+Download.h"; sourceTree = "<group>"; };
 		3F403AD02009D5DC006847D2 /* QYHseeBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHseeBigPictureViewController.h; sourceTree = "<group>"; };
 		3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHseeBigPictureViewController.m; sourceTree = "<group>"; };
 		3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHseeBigPictureViewController.xib; sourceTree = "<group>"; };
@@ -318,6 +316,8 @@
 		3FD443F81FCD496C0058B3EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FE072AC1FF24A9E002A8813 /* QYHFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHFiveViewController.h; sourceTree = "<group>"; };
 		3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHFiveViewController.m; sourceTree = "<group>"; };
+		3FE33877200DA6B600A7F03A /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
+		3FE33878200DA6B600A7F03A /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Download.h"; sourceTree = "<group>"; };
 		3FE37EBA1FFC80CD006BAE12 /* QYHTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHTools.m; sourceTree = "<group>"; };
 		3FECB79B1FE91422006B66C6 /* JKCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKCountDownButton.m; sourceTree = "<group>"; };
 		3FECB79C1FE91422006B66C6 /* JKCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKCountDownButton.h; sourceTree = "<group>"; };
@@ -929,8 +929,8 @@
 		3FDFE2161FDA64F30002A594 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				3F3DFD952008AE16002ADE06 /* UIImageView+Download.h */,
-				3F3DFD942008AE16002ADE06 /* UIImageView+Download.m */,
+				3FE33878200DA6B600A7F03A /* UIImageView+Download.h */,
+				3FE33877200DA6B600A7F03A /* UIImageView+Download.m */,
 				3F6167841FF4BC380071F7C1 /* UIImage+Antialias.h */,
 				3F6167811FF4BC370071F7C1 /* UIImage+Antialias.m */,
 				3F6167851FF4BC380071F7C1 /* UIImage+Image.h */,
@@ -1217,7 +1217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3DFD962008AE16002ADE06 /* UIImageView+Download.m in Sources */,
 				3FCE8AD71FFE053D00ED4A6A /* SDWebImageDownloader.m in Sources */,
 				3FF1B81E1FFCCDB400250885 /* MJProperty.m in Sources */,
 				3FCE8AEE1FFE230400ED4A6A /* CustomDoneBtn.m in Sources */,
@@ -1285,6 +1284,7 @@
 				3FCE8AD81FFE053D00ED4A6A /* SDWebImageDownloaderOperation.m in Sources */,
 				3FE37EBB1FFC80CD006BAE12 /* QYHTools.m in Sources */,
 				3FCE8AD61FFE053D00ED4A6A /* SDWebImageDecoder.m in Sources */,
+				3FE33879200DA6B600A7F03A /* UIImageView+Download.m in Sources */,
 				3F6ECB07200C974F00EB7ED8 /* MBProgressHUD.m in Sources */,
 				3FF1B8131FFCCDB400250885 /* AFImageDownloader.m in Sources */,
 				3FCE8AE81FFE1E0100ED4A6A /* CustomerViewController.m in Sources */,

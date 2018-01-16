@@ -33,7 +33,7 @@ static NSString *const cellIdentifier = @"qyhcellID";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([QYHCustomTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellIdentifier];
 
     __weak typeof (self) KweakSelf = self;
-    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [KweakSelf requestDownData];
     }];
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
@@ -96,11 +96,11 @@ static NSString *const cellIdentifier = @"qyhcellID";
         NSLog(@"--%@--",responseObject);
         self.tableData = [QYHModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
-        [self.tableView reloadData];
-        
         [self.tableView.mj_header endRefreshing];
         
         [SVProgressHUD dismiss];
+        
+        [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

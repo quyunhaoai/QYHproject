@@ -33,6 +33,8 @@
     self.autoresizingMask = UIViewAutoresizingNone;
     self.imageView.userInteractionEnabled = YES;
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigpicture)]];
+    self.imageView.contentMode = UIViewContentModeTop;
+    self.imageView.clipsToBounds = YES;
 }
 -(void)seeBigpicture{
     NSLog(@"%s",__FUNCTION__);
@@ -49,10 +51,9 @@
         if (!image) return ;
         self.placeholderview.hidden = YES;
         if (_topic.isBigPicture) {
-            /*
+            /**/
             CGFloat imageW = topic.middleViewFrame.size.width;
-//            CGFloat imageH = imageW * topic.height / topic.width;
-            CGFloat imageH = 200;
+            CGFloat imageH = imageW * topic.height / topic.width;
             
             // 开启上下文
             UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
@@ -61,17 +62,24 @@
             self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
             // 关闭上下文
             UIGraphicsEndImageContext();
-             */
-            self.imageView.image = [QYHTools ct_imageFromImage:image inRect:CGRectMake(0, 0, topic.middleViewFrame.size.width, 200)];
-        }else{
-//            self.seeBigPictureButton.hidden = YES;
+            /* */
+//            self.imageView.image = [QYHTools ct_imageFromImage:image inRect:CGRectMake(0, 0, topic.middleViewFrame.size.width, 200)];
         }
         
     }];
     
 //    self.gifview.hidden = !topic.is_gif;
     self.gifview.hidden = YES;
-    
+    // 点击查看大图
+//    if (topic.isBigPicture) { // 超长图
+//        self.seeBigPictureButton.hidden = NO;
+//        self.imageView.contentMode = UIViewContentModeTop;
+//        self.imageView.clipsToBounds = YES;
+//    } else {
+//        self.seeBigPictureButton.hidden = YES;
+//        self.imageView.contentMode = UIViewContentModeScaleToFill;
+//        self.imageView.clipsToBounds = NO;
+//    }
 }
 - (IBAction)SeeBigPciture:(id)sender {
     
