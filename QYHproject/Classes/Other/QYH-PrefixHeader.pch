@@ -5,7 +5,13 @@
 //  Created by hao on 2018/1/5.
 //  Copyright © 2018年 hao. All rights reserved.
 //
-
+/*
+ pch步骤:1.提前编译Pch
+ 
+ 1.存放公用宏
+ 2.存放公用头文件
+ 3.自定义Log
+ */
 #ifndef QYH_PrefixHeader_pch
 
 #define QYH_PrefixHeader_pch
@@ -16,3 +22,33 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #endif /* QYH_PrefixHeader_pch */
+
+
+
+#define qyhAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/xiaomage/Desktop/%@.plist", @#filename] atomically:YES];
+
+#define qyhColor(r,g,b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1]
+#define qyhGrayColor(v) qyhColor(v,v,v)
+#define qyhRandomColor qyhColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+/***********屏幕适配*************/
+#define qyhScreenW [UIScreen mainScreen].bounds.size.width
+#define qyhScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6P (qyhScreenH == 736)
+#define iphone6 (qyhScreenH == 667)
+#define iphone5 (qyhScreenH == 568)
+#define iphone4 (qyhScreenH == 480)
+#define isIPhoneX (qyhScreenH==812)
+/***********屏幕适配*************/
+
+#define qyhFunc qyhLog(@"%s",__func__)
+
+#ifdef DEBUG // 调试
+
+#define qyhLog(...) NSLog(__VA_ARGS__);
+
+#else // 发布
+
+#define qyhLog(...)
+
+#endif

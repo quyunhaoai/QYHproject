@@ -17,7 +17,7 @@
     }
     _cellHeight += 77;
     
-    CGSize textMaxSize = CGSizeMake(kScreenW - 2 * QYHMarin, MAXFLOAT);
+    CGSize textMaxSize = CGSizeMake(qyhScreenW - 2 * QYHMarin, MAXFLOAT);
     
     _cellHeight += [self.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:12]} context:nil].size.height + QYHMarin*2;
     
@@ -27,9 +27,9 @@
         CGFloat middleW = textMaxSize.width;
         CGFloat middleH = middleW * self.height / self.width;
 
-        if (middleH >= kScreenH) { // 显示的图片高度超过一个屏幕，就是超长图片
+        if (middleH >= qyhScreenH) { // 显示的图片高度超过一个屏幕，就是超长图片
             middleH = 200;
-            self.bigPicture = YES;
+            self.isBigPicture = YES;
         }
         CGFloat middleY = _cellHeight-37;
         CGFloat middleX = QYHMarin;

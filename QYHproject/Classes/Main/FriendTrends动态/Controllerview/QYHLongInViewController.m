@@ -18,6 +18,7 @@
 @property (weak, nonatomic) UITextField *loginPassword;
 @property (weak, nonatomic) UITextField *registerName;
 @property (weak, nonatomic) UITextField *registerPassword;
+@property (weak, nonatomic) IBOutlet UIButton *closeBut;
 
 @end
 
@@ -55,6 +56,8 @@
     self.loginPassword.delegate = self;
     self.registerPassword.delegate = self;
     self.registerName.delegate = self;
+    
+    self.closeBut.showsTouchWhenHighlighted = YES;///默认是否定的。如果是，显示一个简单的反馈(当前是辉光)，高亮显示
 }
 
 

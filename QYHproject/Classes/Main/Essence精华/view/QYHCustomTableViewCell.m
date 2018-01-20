@@ -66,7 +66,8 @@
     
     if (_QYHModel.type == QYHTopicTypePicture) {
         self.pictureview.hidden = NO;
-        self.pictureview.topic = _QYHModel;
+        self.pictureview.topic = QYHModel;
+        
     }
     if (_QYHModel.type == QYHTopicTypeWord) {
         self.pictureview.hidden = YES;

@@ -51,7 +51,7 @@ typedef NS_ENUM(NSUInteger, QYHTopicType) {
 /** 大图 **/
 @property (nonatomic,strong) NSString* image1;
 /** 是否为超长图片 */
-@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+@property (nonatomic, assign, getter=isBigPicture) BOOL isBigPicture;
 /** 是否为超长图片 */
 @property (nonatomic, assign, getter=is_gif) BOOL is_gif;
 

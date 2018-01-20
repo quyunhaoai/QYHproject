@@ -15,7 +15,6 @@
 {
     // 根据网络状态来加载图片
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    [mgr startMonitoring];
     // 获得原图（SDWebImage的图片缓存是用图片的url字符串作为key）
     UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:originImageURL];
     if (originImage) { // 原图已经被下载过

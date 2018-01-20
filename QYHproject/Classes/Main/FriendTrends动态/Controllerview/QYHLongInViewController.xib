@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QYHLongInViewController">
             <connections>
                 <outlet property="bottomView" destination="FoZ-al-q0Y" id="Ezz-cz-Txk"/>
+                <outlet property="closeBut" destination="nwN-ZI-A4n" id="Go0-ja-WSg"/>
                 <outlet property="leadConstraints" destination="cSM-qT-SRp" id="god-ea-SlP"/>
                 <outlet property="middleView" destination="HDq-2N-djy" id="Xis-iw-aEN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Xbv-gF-5Wu"/>
