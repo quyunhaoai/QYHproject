@@ -29,6 +29,4 @@ NSString  * const QYHTabBarButtonDidRepeatClickNotification = @"QYHTabBarButtonD
 /** TitleButton被重复点击的通知 */
 NSString  * const QYHTitleButtonDidRepeatClickNotification = @"QYHTitleButtonDidRepeatClickNotification";
 
-@implementation QYHCosnt
 
-@end

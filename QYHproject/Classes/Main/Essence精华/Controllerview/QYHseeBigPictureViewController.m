@@ -50,13 +50,16 @@
     }
     
     _imageview = imageview;
+
+//    [imageview addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(returnBackView:)]];
     [_scrollview addSubview:imageview];
     CGFloat maxScale = self.topic.width / imageview.qyh_width;
     if (maxScale > 1) {
         _scrollview.maximumZoomScale = maxScale;
         _scrollview.delegate = self;
     }
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(returnBackView:)];
+    [_scrollview addGestureRecognizer:tap];
 }
 #pragma mark SavePhoto
 -(PHAssetCollection *)createdCollection{

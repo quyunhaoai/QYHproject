@@ -71,15 +71,15 @@
 //    self.gifview.hidden = !topic.is_gif;
     self.gifview.hidden = YES;
     // 点击查看大图
-//    if (topic.isBigPicture) { // 超长图
+    if (topic.isBigPicture) { // 超长图
 //        self.seeBigPictureButton.hidden = NO;
 //        self.imageView.contentMode = UIViewContentModeTop;
 //        self.imageView.clipsToBounds = YES;
-//    } else {
+    } else {
 //        self.seeBigPictureButton.hidden = YES;
 //        self.imageView.contentMode = UIViewContentModeScaleToFill;
 //        self.imageView.clipsToBounds = NO;
-//    }
+    }
 }
 - (IBAction)SeeBigPciture:(id)sender {
     

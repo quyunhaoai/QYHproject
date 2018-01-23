@@ -28,6 +28,4 @@ UIKIT_EXTERN NSString  * const QYHTabBarButtonDidRepeatClickNotification;
 
 /** TitleButton被重复点击的通知 */
 UIKIT_EXTERN NSString  * const QYHTitleButtonDidRepeatClickNotification;
-@interface QYHCosnt : NSObject
 
-@end
