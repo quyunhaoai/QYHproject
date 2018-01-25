@@ -59,5 +59,6 @@ typedef NS_ENUM(NSUInteger, QYHTopicType) {
 @property (nonatomic,assign) CGFloat cellHeight;
 /**中间view的尺寸**/
 @property (nonatomic,assign) CGRect middleViewFrame;
-
+/** downloadPictureProgress */
+@property (nonatomic,assign) CGFloat downloadPictureProgress;
 @end

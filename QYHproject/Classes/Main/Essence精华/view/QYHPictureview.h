@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "QYHModel.h"
+#import "M13ProgressViewRing.h"
 @interface QYHPictureview : UIView
-
+/** <#digest#> */
+@property (weak, nonatomic) M13ProgressViewRing *ringProgressView;
 /** 模型数据 **/
 @property (nonatomic,strong) QYHModel * topic;
 @end

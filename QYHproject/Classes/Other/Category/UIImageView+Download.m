@@ -11,7 +11,7 @@
 #import <UIImageView+WebCache.h>
 #import "QYH.h"
 @implementation UIImageView (Download)
-- (void)qyh_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock
+- (void)qyh_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock andModel:(QYHModel *)topic
 {
     // 根据网络状态来加载图片
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
@@ -23,6 +23,7 @@
     } else { // 原图并未下载过
         if (mgr.isReachableViaWiFi) {
             [self sd_setImageWithURL:[NSURL URLWithString:originImageURL] placeholderImage:placeholder completed:completedBlock];
+            completedBlock(nil,nil,0,[NSURL URLWithString:originImageURL]);
         } else if (mgr.isReachableViaWWAN) {
             // 3G\4G网络下时候要下载原图
             BOOL downloadOriginImageWhen3GOr4G = YES;
@@ -40,6 +41,19 @@
                 [self sd_setImageWithURL:nil placeholderImage:placeholder completed:completedBlock];
             }
         }
+    }
+    /**/
+    if (self.image) {
+    CGFloat imageW = topic.middleViewFrame.size.width;
+    CGFloat imageH = imageW * topic.height / topic.width;
+    
+    // 开启上下文
+    UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
+    // 绘制图片到上下文中
+    [self.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
+    self.image = UIGraphicsGetImageFromCurrentImageContext();
+    // 关闭上下文
+    UIGraphicsEndImageContext();
     }
 }
 

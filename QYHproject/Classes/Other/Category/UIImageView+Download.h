@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <UIImageView+WebCache.h>
-
+#import "QYHModel.h"
 @interface UIImageView (Download)
-- (void)qyh_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock;
+- (void)qyh_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholder:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock andModel:(QYHModel*)topic;
 
 - (void)qyh_setHeader:(NSString *)headerUrl;
 @end

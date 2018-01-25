@@ -64,13 +64,18 @@
     [self setupButton:self.repostBut number:QYHModel.repost placeholderText:@"分享"];
     [self setupButton:self.commentBut number:QYHModel.comment placeholderText:@"评论"];
     
-    if (_QYHModel.type == QYHTopicTypePicture) {
-        self.pictureview.hidden = NO;
-        self.pictureview.topic = QYHModel;
-        
-    }
     if (_QYHModel.type == QYHTopicTypeWord) {
         self.pictureview.hidden = YES;
+        self.pictureview.ringProgressView.hidden = YES;
+    }else if (_QYHModel.type == QYHTopicTypePicture){
+        self.pictureview.hidden = NO;
+        self.pictureview.topic = QYHModel;
+    }else if (_QYHModel.type == QYHTopicTypeVideo){
+        self.pictureview.hidden = NO;
+        self.pictureview.topic = QYHModel;
+    }else if (_QYHModel.type == QYHTopicTypeVoice){
+        self.pictureview.hidden = NO;
+        self.pictureview.topic = QYHModel;
     }
     
 }

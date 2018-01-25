@@ -26,7 +26,7 @@
     if (self.type != QYHTopicTypeWord) { // 中间有内容（图片、声音、视频）
         CGFloat middleW = textMaxSize.width;
         CGFloat middleH = middleW * self.height / self.width;
-
+        NSLog(@"%.f",qyhScreenH);
         if (middleH >= qyhScreenH) { // 显示的图片高度超过一个屏幕，就是超长图片
             middleH = 200;
             self.isBigPicture = YES;
