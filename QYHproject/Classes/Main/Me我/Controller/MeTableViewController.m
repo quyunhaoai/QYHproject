@@ -14,6 +14,7 @@
 #import "QYHCustomTabBar.h"
 #import "AFNetworking.h"
 #import "MJExtension.h"
+#import "QYHNetWork.h"
 static NSString *const ID = @"cellid";
 static NSInteger const  cols = 4;
 static CGFloat const mar = 1;
@@ -41,12 +42,28 @@ static CGFloat const mar = 1;
     [self loadData];
 }
 -(void)loadData{
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters [@"a"] = @"square";
     parameters [@"c"] = @"topic";
-    [mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.CollectionData = [headicon mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
+//    [mgr GET:QYHCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        self.CollectionData = [headicon mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
+//
+//        NSInteger count = _CollectionData.count;
+//        NSInteger row = (count - 1) / cols +1;
+//        NSInteger rowMarin = row -1;
+//        self.collection.qyh_height = row * itemKH + rowMarin;
+//
+//        [self resloveData];
+//
+//        self.tableView.tableFooterView = self.collection;
+//
+//        [self.collection reloadData];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//
+//    }];
+    [[QYHNetWork sharedManager] requestWithMethod:GET WithPath:@"api_open.php" WithParams:parameters WithSuccessBlock:^(NSDictionary *dic) {
+        self.CollectionData = [headicon mj_objectArrayWithKeyValuesArray:dic[@"square_list"]];
         
         NSInteger count = _CollectionData.count;
         NSInteger row = (count - 1) / cols +1;
@@ -58,10 +75,9 @@ static CGFloat const mar = 1;
         self.tableView.tableFooterView = self.collection;
         
         [self.collection reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+    } WithFailurBlock:^(NSError *error) {
+        [self.view makeToast:@"网络加载失败！" duration:2.0 position:@"center" title:@"温馨提示"];
     }];
-    
 }
 -(void)resloveData
 {

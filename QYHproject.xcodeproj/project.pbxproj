@@ -123,6 +123,7 @@
 		3FD443F31FCD496C0058B3EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD443F21FCD496C0058B3EF /* Assets.xcassets */; };
 		3FD443F61FCD496C0058B3EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD443F41FCD496C0058B3EF /* LaunchScreen.storyboard */; };
 		3FD443F91FCD496C0058B3EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD443F81FCD496C0058B3EF /* main.m */; };
+		3FDBC31E20200A210053383F /* QYHNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDBC31D20200A210053383F /* QYHNetWork.m */; };
 		3FE072B01FF24A9E002A8813 /* QYHFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */; };
 		3FE33879200DA6B600A7F03A /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE33877200DA6B600A7F03A /* UIImageView+Download.m */; };
 		3FE37EBB1FFC80CD006BAE12 /* QYHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE37EBA1FFC80CD006BAE12 /* QYHTools.m */; };
@@ -396,6 +397,8 @@
 		3FD443F51FCD496C0058B3EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD443F71FCD496C0058B3EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD443F81FCD496C0058B3EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FDBC31C20200A200053383F /* QYHNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHNetWork.h; sourceTree = "<group>"; };
+		3FDBC31D20200A210053383F /* QYHNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHNetWork.m; sourceTree = "<group>"; };
 		3FE072AC1FF24A9E002A8813 /* QYHFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHFiveViewController.h; sourceTree = "<group>"; };
 		3FE072AD1FF24A9E002A8813 /* QYHFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHFiveViewController.m; sourceTree = "<group>"; };
 		3FE33877200DA6B600A7F03A /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
@@ -554,6 +557,8 @@
 		3F8883D31FEE30B3007309FB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3FDBC31C20200A200053383F /* QYHNetWork.h */,
+				3FDBC31D20200A210053383F /* QYHNetWork.m */,
 				3F8883D01FEE3091007309FB /* QYHTools.h */,
 				3FE37EBA1FFC80CD006BAE12 /* QYHTools.m */,
 			);
@@ -1396,6 +1401,7 @@
 				3FAB767D20188946001836C4 /* M13ProgressViewSegmentedRing.m in Sources */,
 				3FCE8ADA1FFE053D00ED4A6A /* SDWebImagePrefetcher.m in Sources */,
 				3F403AD32009D5DC006847D2 /* QYHseeBigPictureViewController.m in Sources */,
+				3FDBC31E20200A210053383F /* QYHNetWork.m in Sources */,
 				3FF1B8141FFCCDB400250885 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3FF1B82F1FFCD40C00250885 /* QYHBiaoqianViewController.m in Sources */,
 				3F61676F1FF496060071F7C1 /* UIBarButtonItem+Item.m in Sources */,
