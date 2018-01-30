@@ -24,6 +24,7 @@ typedef enum {
 } HTTPMethod;
 @interface QYHNetWork : AFHTTPSessionManager
 + (instancetype)sharedManager;
++ (instancetype)sharedNetworkToolsWithoutBaseUrl;
 - (void)requestWithMethod:(HTTPMethod)method
                         WithPath:(NSString *)path
                       WithParams:(NSDictionary*)params
