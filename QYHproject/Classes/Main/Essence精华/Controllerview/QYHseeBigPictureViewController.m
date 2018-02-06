@@ -42,7 +42,7 @@
         imageview.qyh_height =200;
     }
     imageview.qyh_x = 0;
-    if (imageview.qyh_height > qyhScreenH) {
+    if (imageview.qyh_height > QYHScreenH) {
         imageview.qyh_y = 0;
         _scrollview.contentSize = CGSizeMake(0, imageview.qyh_height);
     }else{

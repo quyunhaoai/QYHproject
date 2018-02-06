@@ -66,7 +66,7 @@
     
     UIImage * image = [self getTheLaunchImage];
     self.LaunchScreen.image = image;
-    CGRect frame = CGRectMake([UIScreen mainScreen].bounds.size.width-85, isIPhoneX? 40 : 20, 70, 35);
+    CGRect frame = CGRectMake([UIScreen mainScreen].bounds.size.width-85, QYHiPhoneX? 40 : 20, 70, 35);
     self.jumpBut = [[CustomDoneBtn alloc] initWithFrame:frame time:10];
     __weak typeof (self) KweakSelf = self;
     _jumpBut.completionHandler = ^{

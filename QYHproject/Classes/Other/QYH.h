@@ -36,6 +36,6 @@
 #define APPFont 14
 
 
-#define bottomMargin (isIPhoneX ? 84 : 64)
+#define bottomMargin (QYHiPhoneX ? 84 : 64)
 #endif /* QYH_h */
 
