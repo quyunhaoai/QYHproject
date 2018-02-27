@@ -16,6 +16,7 @@
 		3F3DFD922008A917002ADE06 /* QYHPictureview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3DFD912008A917002ADE06 /* QYHPictureview.xib */; };
 		3F403AD32009D5DC006847D2 /* QYHseeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */; };
 		3F403AD42009D5DC006847D2 /* QYHseeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */; };
+		3F438C4620455102000403F5 /* zFKyGM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F438C4520455102000403F5 /* zFKyGM.jpg */; };
 		3F43D7881FD125C4008639DF /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43D7861FD125C3008639DF /* UIView+frame.m */; };
 		3F5945541FF4EF1D00091435 /* QYHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945531FF4EF1D00091435 /* QYHModel.m */; };
 		3F5945581FF4F04200091435 /* QYHCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5945561FF4F04200091435 /* QYHCustomTableViewCell.m */; };
@@ -189,6 +190,7 @@
 		3F403AD02009D5DC006847D2 /* QYHseeBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHseeBigPictureViewController.h; sourceTree = "<group>"; };
 		3F403AD12009D5DC006847D2 /* QYHseeBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHseeBigPictureViewController.m; sourceTree = "<group>"; };
 		3F403AD22009D5DC006847D2 /* QYHseeBigPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QYHseeBigPictureViewController.xib; sourceTree = "<group>"; };
+		3F438C4520455102000403F5 /* zFKyGM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zFKyGM.jpg; sourceTree = "<group>"; };
 		3F43D7861FD125C3008639DF /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		3F43D7871FD125C4008639DF /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		3F5945521FF4EF1D00091435 /* QYHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHModel.h; sourceTree = "<group>"; };
@@ -1014,6 +1016,7 @@
 				3FCE8AE51FFE1E0000ED4A6A /* CustomerViewController.h */,
 				3FCE8AE61FFE1E0000ED4A6A /* CustomerViewController.m */,
 				3FCE8AE71FFE1E0000ED4A6A /* CustomerViewController.xib */,
+				3F438C4520455102000403F5 /* zFKyGM.jpg */,
 			);
 			path = Controllerview;
 			sourceTree = "<group>";
@@ -1364,6 +1367,7 @@
 				3FCE8AD11FFE053D00ED4A6A /* LICENSE in Resources */,
 				3FF1B8381FFCD4ED00250885 /* QYHTagTableViewCell.xib in Resources */,
 				3FF1B8271FFCCDB400250885 /* LICENSE.txt in Resources */,
+				3F438C4620455102000403F5 /* zFKyGM.jpg in Resources */,
 				3FF1B8261FFCCDB400250885 /* README.md in Resources */,
 				3F61676C1FF4920A0071F7C1 /* QYHTwoViewController.xib in Resources */,
 				3F61677C1FF4BBC50071F7C1 /* QYHCustomLonginview.xib in Resources */,
@@ -1657,7 +1661,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC6P6VV3A6;
-				GCC_PREFIX_HEADER = "/Users/haobook/Documents/GitHub/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/hao/Desktop/Desktop/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/QYHproject/Classes/Third\"";
 				INFOPLIST_FILE = QYHproject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1681,7 +1685,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TC6P6VV3A6;
-				GCC_PREFIX_HEADER = "/Users/haobook/Documents/GitHub/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/hao/Desktop/Desktop/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/QYHproject/Classes/Third\"";
 				INFOPLIST_FILE = QYHproject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

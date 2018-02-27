@@ -20,7 +20,11 @@
     [super awakeFromNib];
     // Initialization code
     [self.name sizeToFit];
-
+//    self.headimage.contentMode = UIViewContentModeScaleToFill;
+    [_headimage setContentScaleFactor:[[UIScreen mainScreen] scale]];
+//    _headimage.contentMode =  UIViewContentModeCenter;
+    _headimage.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    _headimage.clipsToBounds  = YES;
 }
 -(void)setHead:(headicon *)Head
 {

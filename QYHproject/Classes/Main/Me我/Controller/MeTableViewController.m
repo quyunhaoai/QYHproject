@@ -18,6 +18,7 @@
 static NSString *const ID = @"cellid";
 static NSInteger const  cols = 4;
 static CGFloat const mar = 1;
+CGFloat const qyhItemH = 129;
 #define itemKH     ([UIScreen mainScreen].bounds.size.width - (cols - mar))/cols
 @interface MeTableViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *CollectionData;
@@ -63,12 +64,13 @@ static CGFloat const mar = 1;
 //
 //    }];
     [[QYHNetWork sharedManager] requestWithMethod:GET WithPath:@"api_open.php" WithParams:parameters WithSuccessBlock:^(NSDictionary *dic) {
+        
         self.CollectionData = [headicon mj_objectArrayWithKeyValuesArray:dic[@"square_list"]];
         
         NSInteger count = _CollectionData.count;
         NSInteger row = (count - 1) / cols +1;
         NSInteger rowMarin = row -1;
-        self.collection.qyh_height = row * itemKH + rowMarin;
+        self.collection.qyh_height = row * qyhItemH + rowMarin;
         
         [self resloveData];
         
@@ -136,14 +138,15 @@ static CGFloat const mar = 1;
     CGFloat margin = 1;
     CGFloat itmesWH = ([UIScreen mainScreen].bounds.size.width - (number - margin))/number;
 
-    layout.itemSize = CGSizeMake(itmesWH, itmesWH);
+    layout.itemSize = CGSizeMake(itmesWH, qyhItemH);
+    
     layout.minimumLineSpacing = margin;
     layout.minimumInteritemSpacing = margin;
     
     UICollectionView *collectionview = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, 0, 350) collectionViewLayout:layout];
 
     collectionview.backgroundColor = self.tableView.backgroundColor;
-    
+    collectionview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.tableView.tableFooterView = collectionview;
     
     collectionview.delegate = self;
