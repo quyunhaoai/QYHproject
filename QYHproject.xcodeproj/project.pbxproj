@@ -1317,7 +1317,7 @@
 				TargetAttributes = {
 					3FD443E51FCD496C0058B3EF = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1659,9 +1659,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TC6P6VV3A6;
-				GCC_PREFIX_HEADER = "/Users/hao/Desktop/Desktop/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "/Users/yanxuelvxing/Documents/GitHub/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/QYHproject/Classes/Third\"";
 				INFOPLIST_FILE = QYHproject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1683,9 +1683,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TC6P6VV3A6;
-				GCC_PREFIX_HEADER = "/Users/hao/Desktop/Desktop/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "/Users/yanxuelvxing/Documents/GitHub/QYHproject/QYHproject/Classes/Other/QYH-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/QYHproject/Classes/Third\"";
 				INFOPLIST_FILE = QYHproject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
